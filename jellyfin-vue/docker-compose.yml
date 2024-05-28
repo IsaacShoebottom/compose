@@ -1,6 +1,7 @@
 version: '3'
 services:
   jellyfin-vue:
+    container_name: jellyfin-vue
     image: ghcr.io/jellyfin/jellyfin-vue:unstable
     ports:
      - 8083:80

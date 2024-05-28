@@ -1,0 +1,16 @@
+version: "2"
+
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    command: -H unix:///var/run/docker.sock
+    restart: always
+    environment:
+      - VIRTUAL_HOST=portainer.shoebottom.ca
+      - VIRTUAL_PORT=9000
+    ports:
+      - 9443:9443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /docker/appdata/portainer/data:/data
