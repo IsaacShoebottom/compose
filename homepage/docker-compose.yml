@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  static-web-server:
+    image: joseluisq/static-web-server:latest
+    container_name: homepage
+    ports:
+      - 8080:80
+    restart: unless-stopped
+    environment:
+      # Note: those envs are customizable but also optional
+      - SERVER_ROOT=/var/public
+      - SERVER_CONFIG_FILE=/etc/config.toml
+    volumes:
+      - /home/isaac/www/shoebottom.ca:/var/public
+      - /home/isaac/Media/Music-LQ:/var/public/music-lq
+      - /home/isaac/Media/Music:/var/public/music
+      - /home/isaac/Media/Music-HQ:/var/public/music-hq
+      - /home/isaac/Media/Movies:/var/public/movies
+      - /home/isaac/Media/TV:/var/public/tv
+      - /home/isaac/Media/Anime:/var/public/anime
+      - /home/isaac/Media/Host:/var/public/host
+      - /docker/appdata/static-web-server/homepage.toml:/etc/config.toml

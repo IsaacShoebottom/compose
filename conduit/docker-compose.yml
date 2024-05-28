@@ -1,0 +1,21 @@
+version: '3'
+services:
+    conduit:
+        container_name: conduit
+        image: matrixconduit/matrix-conduit:latest
+        restart: unless-stopped
+        ports:
+            - 6167:6167
+        volumes:
+            - /docker/appdata/conduit/db:/var/lib/matrix-conduit/
+            - /docker/appdata/conduit/conduit.toml:/etc/conduit/conduit.toml
+        environment:
+            CONDUIT_CONFIG: /etc/conduit/conduit.toml
+    turn:
+      container_name: coturn-server
+      image: docker.io/coturn/coturn:latest
+      restart: unless-stopped
+      network_mode: "host"
+      volumes:
+        - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
+

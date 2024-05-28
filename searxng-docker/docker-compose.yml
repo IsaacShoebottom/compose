@@ -1,0 +1,49 @@
+version: "3.7"
+
+services:
+  redis:
+    container_name: redis
+    image: cgr.dev/chainguard/valkey:latest
+    command: --save 30 1 --loglevel warning
+    restart: unless-stopped
+    volumes:
+      - valkey-data:/data
+    cap_drop:
+      - ALL
+    cap_add:
+      - SETGID
+      - SETUID
+      - DAC_OVERRIDE
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+
+  searxng:
+    container_name: searxng
+    image: docker.io/searxng/searxng:latest
+    restart: unless-stopped
+    ports:
+      - 8383:8080
+    volumes:
+      - /docker/appdata/searxng/config:/etc/searxng:rw
+    environment:
+      - SEARXNG_BASE_URL=https://searx.shoebottom.ca/
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
+
+networks:
+  searxng:
+
+volumes:
+  valkey-data:

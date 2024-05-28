@@ -1,0 +1,10 @@
+version: '2'
+services:
+  cloudflare-ddns:
+    container_name: cloudflare-ddns
+    image: oznu/cloudflare-ddns:latest
+    restart: always
+    environment:
+      - API_KEY=rrsII0uMDMCjOjkpwicQJRh9JjiGIWvZpCLmCUzN
+      - ZONE=shoebottom.ca
+      - PROXIED=true

@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  static-web-server:
+    image: joseluisq/static-web-server:latest
+    container_name: blog
+    ports:
+      - 8081:80
+    restart: unless-stopped
+    environment:
+      # Note: those envs are customizable but also optional
+      - SERVER_ROOT=/var/public
+      - SERVER_CONFIG_FILE=/etc/config.toml
+    volumes:
+      - /home/isaac/www/blog.shoebottom.ca/public:/var/public
+      - /docker/appdata/static-web-server/blog.toml:/etc/config.toml

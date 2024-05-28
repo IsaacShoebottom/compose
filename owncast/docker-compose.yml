@@ -1,0 +1,13 @@
+version: "3.4"
+services:
+  owncast:
+    image: owncast/owncast:latest
+    container_name: "owncast"
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - "8082:8080"
+      - "1935:1935"
+    volumes:
+      - /docker/appdata/owncast/data:/app/data

@@ -1,0 +1,26 @@
+version: '3'
+services:
+    wrapperr:
+        ports:
+            - 8282:8282
+        container_name: wrapperr
+        image: ghcr.io/aunefyren/wrapperr:latest
+        restart: unless-stopped
+        volumes:
+            - '/docker/appdata/wrapperr/config:/app/config'
+    tautulli:
+        image: ghcr.io/tautulli/tautulli:latest
+        container_name: tautulli
+        restart: unless-stopped
+        volumes:
+            - '/docker/appdata/tautulli/config:/config'
+        environment:
+            - TZ=America/Moncton
+        ports:
+            - 8181:8181
+            
+networks:
+  plex-wrapped:
+    driver: bridge
+    ipam:
+      driver: default
