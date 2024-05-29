@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  gotify:
+    container_name: gotify
+    hostname: gotify.local
+    image: gotify/server
+    ports:
+      - 8085:80
+    volumes:
+      - "/docker/appdata/gotify/data:/app/data"
+      
+networks:
+ default:
+   name: "ubuntu-server"
+   external: true

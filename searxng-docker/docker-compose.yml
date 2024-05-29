@@ -8,6 +8,8 @@ services:
     restart: unless-stopped
     volumes:
       - valkey-data:/data
+    networks:
+      - searxng
     cap_drop:
       - ALL
     cap_add:
@@ -26,6 +28,8 @@ services:
     restart: unless-stopped
     ports:
       - 8383:8080
+    networks:
+      - searxng
     volumes:
       - /docker/appdata/searxng/config:/etc/searxng:rw
     environment:

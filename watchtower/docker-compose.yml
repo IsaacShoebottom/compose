@@ -1,0 +1,20 @@
+version: "3"
+services:
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      - WATCHTOWER_NOTIFICATION_URL=gotify://gotify.local:80/AqM0qG78r90ohBf?disabletls=yes
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_REMOVE_VOLUMES=true
+      - WATCHTOWER_INCLUDE_RESTARTING=true
+      - WATCHTOWER_POLL_INTERVAL=7200
+      
+networks:
+ default:
+   name: "ubuntu-server"
+   external: true
