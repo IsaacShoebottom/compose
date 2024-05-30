@@ -1,0 +1,13 @@
+[Unit]
+Description=Portainer container deployment service
+Type=simple
+
+[Service]
+WorkingDirectory=/docker/compose/portainer
+ExecStart=docker-compose up
+ExecStop=docker-compose down
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=default.target
