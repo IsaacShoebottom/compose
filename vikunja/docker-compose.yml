@@ -1,0 +1,19 @@
+version: '3'
+services:
+  vikunja:
+    image: vikunja/vikunja
+    container_name: vikunja
+    environment:
+      VIKUNJA_SERVICE_JWTSECRET: TFph0aZKaoDL4zQESE
+      VIKUNJA_SERVICE_PUBLICURL: https://vikunja.shoebottom.ca/
+      VIKUNJA_SERVICE_ENABLEREGISTRATION: false
+      # Note the default path is /app/vikunja/vikunja.db.
+      # This config variable moves it to a different folder so you can use a volume and 
+      # store the database file outside the container so state is persisted even if the container is destroyed.
+      VIKUNJA_DATABASE_PATH: /db/vikunja.db
+    ports:
+      - 3456:3456
+    volumes:
+      - /docker/appdata/vikunja/files:/app/vikunja/files
+      - /docker/appdata/vikunja/db:/db
+    restart: unless-stopped
