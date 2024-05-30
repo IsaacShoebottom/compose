@@ -13,7 +13,6 @@ services:
       - "31415:80/tcp"
     environment:
       TZ: 'America/Moncton'
-      WEBPASSWORD: 'Txx6jwOf213s51afeE'
       FTLCONF_LOCAL_IPV4: '192.168.2.128'
       PIHOLE_DNS_: "127.0.0.1#5335"
       DNSSEC: "true"

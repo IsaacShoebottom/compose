@@ -5,6 +5,5 @@ services:
     image: oznu/cloudflare-ddns:latest
     restart: always
     environment:
-      - API_KEY=rrsII0uMDMCjOjkpwicQJRh9JjiGIWvZpCLmCUzN
       - ZONE=shoebottom.ca
       - PROXIED=true

@@ -4,7 +4,6 @@ services:
     image: vikunja/vikunja
     container_name: vikunja
     environment:
-      VIKUNJA_SERVICE_JWTSECRET: TFph0aZKaoDL4zQESE
       VIKUNJA_SERVICE_PUBLICURL: https://vikunja.shoebottom.ca/
       VIKUNJA_SERVICE_ENABLEREGISTRATION: false
       # Note the default path is /app/vikunja/vikunja.db.
