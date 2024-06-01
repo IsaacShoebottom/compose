@@ -5,6 +5,7 @@ services:
     container_name: gotify
     hostname: gotify.local
     image: gotify/server
+    restart: unless-stopped
     ports:
       - 8085:80
     volumes:
