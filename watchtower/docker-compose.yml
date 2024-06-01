@@ -14,7 +14,7 @@ services:
       - WATCHTOWER_INCLUDE_RESTARTING=true
       - WATCHTOWER_POLL_INTERVAL=7200
     env_file:
-      - stack.env
+      - ../stack.env
       
 networks:
  default:
