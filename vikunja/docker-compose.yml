@@ -16,3 +16,5 @@ services:
       - /docker/appdata/vikunja/files:/app/vikunja/files
       - /docker/appdata/vikunja/db:/db
     restart: unless-stopped
+    env_file:
+      - stack.env

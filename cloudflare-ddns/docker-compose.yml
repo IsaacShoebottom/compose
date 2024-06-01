@@ -7,3 +7,5 @@ services:
     environment:
       - ZONE=shoebottom.ca
       - PROXIED=true
+    env_file:
+      - stack.env
