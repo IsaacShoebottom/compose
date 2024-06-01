@@ -1,6 +1,7 @@
 version: "3"
 services:
   mc:
+    container_name: atm3
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
@@ -21,7 +22,6 @@ services:
       DIFFICULTY: "normal"
       SNOOPER_ENABLED: "false"
       ALLOW_FLIGHT: "true"
-      SETUP_ONLY: "true"
       USE_SIMD_FLAGS: "true"
       ENABLE_RCON: "true"
     volumes:
