@@ -2,7 +2,7 @@ version: "3"
 services:
   mc:
     container_name: atm3
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:java8-graalvm-ce
     tty: true
     stdin_open: true
     ports:
@@ -24,6 +24,7 @@ services:
       ALLOW_FLIGHT: "true"
       USE_SIMD_FLAGS: "true"
       ENABLE_RCON: "true"
+      USE_AIKAR_FLAGS: "true"
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - /docker/appdata/atm3/data:/data
