@@ -22,7 +22,6 @@ services:
       DIFFICULTY: "normal"
       SNOOPER_ENABLED: "false"
       ALLOW_FLIGHT: "true"
-      USE_SIMD_FLAGS: "true"
       ENABLE_RCON: "true"
       USE_AIKAR_FLAGS: "true"
     volumes:
