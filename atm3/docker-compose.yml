@@ -5,6 +5,7 @@ services:
     image: itzg/minecraft-server:java8-graalvm-ce
     tty: true
     stdin_open: true
+    restart: unless-stopped
     ports:
       - "25565:25565"
     env_file:
