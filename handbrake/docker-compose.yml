@@ -7,7 +7,7 @@ services:
     ports:
       - "5800:5800"
     volumes:
-      - "/home/isaac:/storage:ro"
+      - "/home/isaac:/storage:rw"
       - "/docker/appdata/handbrake/config:/config:rw"
       - "/docker/appdata/handbrake/trash:/trash:rw"
       - "/docker/appdata/handbrake/watch:/watch:rw"
