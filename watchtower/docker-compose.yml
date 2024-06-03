@@ -13,6 +13,7 @@ services:
       - WATCHTOWER_REMOVE_VOLUMES=true
       - WATCHTOWER_INCLUDE_RESTARTING=true
       - WATCHTOWER_POLL_INTERVAL=7200
+      - WATCHTOWER_DISABLE_CONTAINERS='pihole atm3'
     env_file:
       - ../stack.env
       
