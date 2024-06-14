@@ -8,4 +8,3 @@ services:
       - /docker/appdata/yacht/config:/config
       - /var/run/docker.sock:/var/run/docker.sock
     image: selfhostedpro/yacht
-

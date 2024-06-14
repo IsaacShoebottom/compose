@@ -18,4 +18,3 @@ services:
       network_mode: "host"
       volumes:
         - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
-

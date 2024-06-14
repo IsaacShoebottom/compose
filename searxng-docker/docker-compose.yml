@@ -21,7 +21,6 @@ services:
       options:
         max-size: "1m"
         max-file: "1"
-
   searxng:
     container_name: searxng
     image: docker.io/searxng/searxng:latest
@@ -45,9 +44,7 @@ services:
       options:
         max-size: "1m"
         max-file: "1"
-
 networks:
   searxng:
-
 volumes:
   valkey-data:

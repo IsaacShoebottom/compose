@@ -16,7 +16,6 @@ services:
       - WATCHTOWER_DISABLE_CONTAINERS="pihole atm3 handbrake"
     env_file:
       - ../stack.env
-      
 networks:
  default:
    name: "ubuntu-server"
