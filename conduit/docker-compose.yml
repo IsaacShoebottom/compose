@@ -1,8 +1,7 @@
 version: '3'
 services:
   synapse-admin:
-    container_name: synapse-admin
-    hostname: synapse-admin
+    container_name: conduit-admin
     image: awesometechnologies/synapse-admin:latest
     ports:
       - "6168:80"
