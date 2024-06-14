@@ -1,11 +1,11 @@
 version: '3'
 services:
-  synapse-admin:
-    container_name: conduit-admin
-    image: awesometechnologies/synapse-admin:latest
-    ports:
-      - "6168:80"
-    restart: unless-stopped
+  # synapse-admin:
+  #   container_name: conduit-admin
+  #   image: awesometechnologies/synapse-admin:latest
+  #   ports:
+  #     - "6168:80"
+  #   restart: unless-stopped
   conduit:
       container_name: conduit
       image: matrixconduit/matrix-conduit:latest
