@@ -15,6 +15,7 @@ services:
       container_name: coturn-server
       image: docker.io/coturn/coturn:latest
       restart: unless-stopped
-      network_mode: "host"
       volumes:
         - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
+networks:
+  conduit:
