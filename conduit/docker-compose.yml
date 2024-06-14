@@ -12,10 +12,12 @@ services:
         environment:
             CONDUIT_CONFIG: /etc/conduit/conduit.toml
     turn:
-      container_name: coturn-server
-      image: docker.io/coturn/coturn:latest
+      container_name: eturnal
+      image: ghcr.io/processone/eturnal:latest
       ports:
-        - 3478:3478
+        - 3478:3478/udp
+      env_file:
+        - ../stack.env
       restart: unless-stopped
       volumes:
         - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
