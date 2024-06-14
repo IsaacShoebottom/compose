@@ -14,6 +14,8 @@ services:
     turn:
       container_name: coturn-server
       image: docker.io/coturn/coturn:latest
+      ports:
+        - 3478:3478
       restart: unless-stopped
       volumes:
         - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
