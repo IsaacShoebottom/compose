@@ -26,6 +26,6 @@ services:
       - ../stack.env
     restart: unless-stopped
     volumes:
-      - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
+      - /docker/appdata/eturnal/data:/opt/eturnal/
 networks:
   conduit:
