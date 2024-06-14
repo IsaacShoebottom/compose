@@ -1,25 +1,32 @@
 version: '3'
 services:
-    conduit:
-        container_name: conduit
-        image: matrixconduit/matrix-conduit:latest
-        restart: unless-stopped
-        ports:
-            - 6167:6167
-        volumes:
-            - /docker/appdata/conduit/db:/var/lib/matrix-conduit/
-            - /docker/appdata/conduit/conduit.toml:/etc/conduit/conduit.toml
-        environment:
-            CONDUIT_CONFIG: /etc/conduit/conduit.toml
-    turn:
-      container_name: eturnal
-      image: ghcr.io/processone/eturnal:latest
-      ports:
-        - 3478:3478/udp
-      env_file:
-        - ../stack.env
+  synapse-admin:
+    container_name: synapse-admin
+    hostname: synapse-admin
+    image: awesometechnologies/synapse-admin:latest
+    ports:
+      - "6168:80"
+    restart: unless-stopped
+  conduit:
+      container_name: conduit
+      image: matrixconduit/matrix-conduit:latest
       restart: unless-stopped
+      ports:
+        - 6167:6167
       volumes:
-        - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
+        - /docker/appdata/conduit/db:/var/lib/matrix-conduit/
+        - /docker/appdata/conduit/conduit.toml:/etc/conduit/conduit.toml
+      environment:
+        CONDUIT_CONFIG: /etc/conduit/conduit.toml
+  turn:
+    container_name: eturnal
+    image: ghcr.io/processone/eturnal:latest
+    ports:
+      - 3478:3478/udp
+    env_file:
+      - ../stack.env
+    restart: unless-stopped
+    volumes:
+      - /docker/appdata/conduit/coturn.conf:/etc/coturn/turnserver.conf
 networks:
   conduit:
