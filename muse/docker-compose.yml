@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  muse:
+    image: codetheweb/muse:latest
+    restart: always
+    volumes:
+      - /docker/appdata/muse/data:/data
+    env_file:
+      - ../stack.env
+    environment:
+      - REGISTER_COMMANDS_ON_BOT=true
