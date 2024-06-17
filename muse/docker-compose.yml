@@ -10,3 +10,7 @@ services:
       - ../stack.env
     environment:
       - REGISTER_COMMANDS_ON_BOT=true
+networks:
+ default:
+   name: "ubuntu-server"
+   external: true
