@@ -1,6 +1,7 @@
 version: '3'
 services:
   server:
+    container_name: tes3mp
     image: "tes3mp/server:0.8.1"
     environment:
       - TES3MP_SERVER_HOSTNAME="Isaac's Server"
