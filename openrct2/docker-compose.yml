@@ -7,8 +7,6 @@ services:
     ports:
       # OpenRCT2 only uses TCP
       - "11753:11753/tcp"
-    command:
-      - openrct2-cli host /home/openrct2/.config/OpenRCT2/save/server.sv6 --no-install --verbose --headless --port=11753
     volumes:
       - /docker/appdata/openrct2/config:/home/openrct2/.config/OpenRCT2
       - /docker/appdata/openrct2/saves:/home/openrct2/.config/OpenRCT2/save/
