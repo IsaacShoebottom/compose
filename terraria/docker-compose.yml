@@ -13,3 +13,7 @@ services:
     volumes:
       - /docker/appdata/terraria/worlds:/root/.local/share/Terraria/Worlds
     restart: unless-stopped
+networks:
+ default:
+   name: "ubuntu-server"
+   external: true
