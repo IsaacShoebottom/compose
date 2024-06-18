@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    image: "tes3mp/server:0.8.1"
+    environment:
+      - TES3MP_SERVER_HOSTNAME="Isaac's Server"
+    volumes:
+      - "/docker/appdata/tes3mp/data:/server/data"
+    ports:
+      - "25575:25575/udp"
