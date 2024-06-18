@@ -1,0 +1,12 @@
+version: '3'
+services:
+  dockovpn:
+    image: alekslitvinenk/openvpn
+    cap_add:
+        - NET_ADMIN
+    ports:
+        - 1194:1194/udp # Expose tcp if you defined HOST_TUN_PROTOCOL=tcp
+    # Environment variables: https://github.com/dockovpn/dockovpn#environment-variables
+    volumes:
+        - /docker/appdata/dockovpn/config:/opt/Dockovpn_data
+    restart: always
