@@ -8,3 +8,7 @@ services:
       - "/docker/appdata/tes3mp/data:/server/data"
     ports:
       - "25575:25575/udp"
+networks:
+ default:
+   name: "ubuntu-server"
+   external: true
