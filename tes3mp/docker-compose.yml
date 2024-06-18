@@ -5,10 +5,13 @@ services:
     image: "tes3mp/server:0.8.1"
     environment:
       - TES3MP_SERVER_HOSTNAME="Isaac's Server"
+      - TES3MP_SERVER_PORT=25575
+      # Disable master server
+      - TES3MP_SERVER_ENABLED=false
     volumes:
       - "/docker/appdata/tes3mp/data:/server/data"
     ports:
-      - "25575:25565/udp"
+      - "25575:25575/udp"
 networks:
  default:
    name: "ubuntu-server"
