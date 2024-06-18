@@ -11,3 +11,7 @@ services:
     volumes:
         - /docker/appdata/dockovpn/config:/opt/Dockovpn_data
     restart: always
+networks:
+ default:
+   name: "ubuntu-server"
+   external: true
