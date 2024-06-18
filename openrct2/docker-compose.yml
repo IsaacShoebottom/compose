@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  openrct2:
+    container_name: openrct2
+    restart: unless-stopped
+    image: openrct2/openrct2-cli:latest
+    ports:
+      # OpenRCT2 only uses TCP
+      - "11753:11753/tcp"
+    command:
+      - host /home/openrct2/.config/OpenRCT2/save/server.sv6
+    volumes:
+      - /docker/appdata/openrct2/config:/home/openrct2/.config/OpenRCT2
+      - /docker/appdata/openrct2/saves:/home/openrct2/.config/OpenRCT2/save/
