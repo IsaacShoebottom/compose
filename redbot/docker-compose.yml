@@ -8,3 +8,7 @@ services:
       - /docker/appdata/redbot/data:/data
     environment:
       - TZ=America/Moncton
+networks:
+ default:
+   name: "ubuntu-server"
+   external: true
