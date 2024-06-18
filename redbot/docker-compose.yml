@@ -4,6 +4,8 @@ services:
     container_name: redbot
     image: phasecorex/red-discordbot
     restart: unless-stopped
+    env_file:
+      - ../stack.env
     volumes:
       - /docker/appdata/redbot/data:/data
     environment:
