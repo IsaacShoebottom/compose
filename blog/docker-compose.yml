@@ -12,5 +12,5 @@ services:
       - SERVER_ROOT=/var/public
       - SERVER_CONFIG_FILE=/etc/config.toml
     volumes:
-      - /home/isaac/www/blog.shoebottom.ca/public:/var/public
+      - /docker/appdata/blog/public:/var/public
       - /docker/appdata/static-web-server/blog.toml:/etc/config.toml

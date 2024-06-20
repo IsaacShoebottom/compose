@@ -12,7 +12,7 @@ services:
       - SERVER_ROOT=/var/public
       - SERVER_CONFIG_FILE=/etc/config.toml
     volumes:
-      - /home/isaac/www/shoebottom.ca:/var/public
+      - /docker/appdata/homepage:/var/public
       - /home/isaac/Media/Music-LQ:/var/public/music-lq
       - /home/isaac/Media/Music:/var/public/music
       - /home/isaac/Media/Music-HQ:/var/public/music-hq
