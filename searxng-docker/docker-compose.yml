@@ -44,5 +44,9 @@ services:
       options:
         max-size: "1m"
         max-file: "1"
+    healthcheck:
+      test: ["CMD", "http://localhost:8080 || exit 1"]
+      interval: 10s
+      timeout: 3s
 networks:
   searxng:
