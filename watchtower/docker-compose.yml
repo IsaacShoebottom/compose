@@ -12,7 +12,6 @@ services:
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_REMOVE_VOLUMES=true
       - WATCHTOWER_INCLUDE_RESTARTING=true
-      - WATCHTOWER_POLL_INTERVAL=7200
       - WATCHTOWER_WARN_ON_HEAD_FAILURE=never # fixes culturalconnections notifcation
       - WATCHTOWER_DISABLE_CONTAINERS="pihole atm3 handbrake culturalconnections"
     env_file:
