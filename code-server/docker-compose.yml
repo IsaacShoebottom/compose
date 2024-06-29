@@ -1,0 +1,13 @@
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - TZ=America/Moncton
+      - PROXY_DOMAIN=code.shoebottom.ca #optional
+      - DEFAULT_WORKSPACE=/config/workspace #optional
+    volumes:
+      - /docker/appdata/code-server/config:/config
+    ports:
+      - 8086:8443
+    restart: unless-stopped
