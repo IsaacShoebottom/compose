@@ -2,6 +2,8 @@ services:
   code-server:
     image: lscr.io/linuxserver/code-server:latest
     container_name: code-server
+    env_file:
+      - ../stack.env
     environment:
       - TZ=America/Moncton
       - PROXY_DOMAIN=code.shoebottom.ca
