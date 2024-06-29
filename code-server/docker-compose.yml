@@ -4,7 +4,7 @@ services:
     container_name: code-server
     environment:
       - TZ=America/Moncton
-      - PROXY_DOMAIN=code.shoebottom.ca #optional
+      - PROXY_DOMAIN=code.shoebottom.ca
     volumes:
       - /docker/appdata/code-server/config:/config
     ports:
