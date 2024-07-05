@@ -4,6 +4,7 @@ services:
   headscale:
     image: headscale/headscale:0.22.3
     restart: unless-stopped
+    hostname: headscale
     container_name: headscale
     ports:
       - "8087:8080" # Connection port
