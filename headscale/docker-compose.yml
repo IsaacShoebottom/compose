@@ -11,3 +11,9 @@ services:
     volumes:
       - /docker/appdata/headscale/config:/etc/headscale
     command: headscale serve
+  headscale-admin:
+    image: goodieshq/headscale-admin:latest
+    container_name: headscale-admin
+    restart: unless-stopped
+    ports:
+      - "8089:80"
