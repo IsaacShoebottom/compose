@@ -1,0 +1,13 @@
+version: "3.7"
+# https://github.com/juanfont/headscale/blob/main/docs/running-headscale-container.md
+services:
+  headscale:
+    image: headscale/headscale:0.22.3
+    restart: unless-stopped
+    container_name: headscale
+    ports:
+      - "8087:8080" # Connection port
+      - "8088:9090" # Metrics port
+    volumes:
+      - /docker/appdata/headscale/config:/etc/headscale
+    command: headscale serve
