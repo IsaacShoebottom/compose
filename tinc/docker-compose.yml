@@ -1,0 +1,25 @@
+version: '3'
+# https://github.com/tiredofit/docker-tinc
+services:
+  tinc-shoebottom-ca:
+    image: tiredofit/tinc:latest
+    container_name: tinc-shoebottom-ca
+    hostname: hostname
+    devices:
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - 655:655
+    volumes:
+      - /docker/appdata/tinc/data:/etc/tinc
+      - /docker/appdata/tinc/logs:/var/log/tinc
+    environment:
+      - ENABLE_GIT=FALSE
+      - CONTAINER_NAME=tinc-shoebottom-ca
+      - CRON_PERIOD=5
+      - DEBUG=1
+      - NETWORK=shoebottom-ca
+      - COMPRESSION=9
+    network_mode: "host"
+
