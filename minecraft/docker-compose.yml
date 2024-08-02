@@ -47,7 +47,6 @@ services:
         slumber
         achievements-optimizer
         disable-portal-checks
-        fixmcstats
         helpfulcommands
         disconnect-packet-fix
         headfix
