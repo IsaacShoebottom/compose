@@ -54,5 +54,6 @@ services:
         dynmap
         fastback
         sessility
+        rightclickharvest
     volumes:
       - /docker/appdata/minecraft:/data
