@@ -55,5 +55,8 @@ services:
         fastback
         sessility
         rightclickharvest
+        netherportalfix
+        dismount-entity
+        plasmo-voice
     volumes:
       - /docker/appdata/minecraft:/data
