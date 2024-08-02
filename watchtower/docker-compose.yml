@@ -13,7 +13,7 @@ services:
       - WATCHTOWER_REMOVE_VOLUMES=true
       - WATCHTOWER_INCLUDE_RESTARTING=true
       - WATCHTOWER_WARN_ON_HEAD_FAILURE=never # fixes culturalconnections notifcation
-      - WATCHTOWER_DISABLE_CONTAINERS="pihole atm3 handbrake culturalconnections"
+      - WATCHTOWER_DISABLE_CONTAINERS="pihole minecraft atm3 handbrake culturalconnections xedit-mirror"
     env_file:
       - ../stack.env
 networks:
