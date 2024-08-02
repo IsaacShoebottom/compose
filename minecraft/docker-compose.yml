@@ -53,5 +53,6 @@ services:
         sdlink
         dynmap
         fastback
+        sessility
     volumes:
       - /docker/appdata/minecraft:/data
