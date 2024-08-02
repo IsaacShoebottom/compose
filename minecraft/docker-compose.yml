@@ -52,5 +52,6 @@ services:
         headfix
         sdlink
         dynmap
+        fastback
     volumes:
       - /docker/appdata/minecraft:/data
