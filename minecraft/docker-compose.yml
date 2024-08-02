@@ -59,5 +59,6 @@ services:
         netherportalfix
         dismount-entity
         plasmo-voice
+        jei
     volumes:
       - /docker/appdata/minecraft:/data
