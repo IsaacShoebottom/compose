@@ -1,0 +1,56 @@
+version: "3"
+services:
+  mc:
+    container_name: minecraft
+    image: itzg/minecraft-server:java21-graalvm
+    restart: unless-stopped
+    ports:
+      - "25565:25565" # minecraft
+      - "25566:8123" # dynmap
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      TZ: "America/Moncton"
+      ENABLE_ROLLING_LOGS: "true"
+      MAX_MEMORY: "6G"
+      VERSION: "1.21"
+      MOTD: "Let's get it started in here"
+      DIFFICULTY: "normal"
+      SNOOPER_ENABLED: "false"
+      ALLOW_FLIGHT: "true"
+      ENABLE_RCON: "true"
+      USE_AIKAR_FLAGS: "true"
+      OPS: "IsaacDaybreak"
+      MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
+      MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
+      # sdlink for discord integration
+      # dynmap for map viewer
+      MODRINTH_PROJECTS: |
+        fabric-api
+        lithium
+        ferrite-core
+        modernfix
+        krypton
+        debugify
+        no-chat-reports
+        vmp-fabric
+        noisium
+        c2me-fabric
+        leaves-be-gone
+        servercore
+        alternate-current
+        ksyxis
+        faster-random
+        railoptimization
+        recipecooldown
+        slumber
+        achievements-optimizer
+        disable-portal-checks
+        fixmcstats
+        helpfulcommands
+        disconnect-packet-fix
+        headfix
+        sdlink
+        dynmap
+    volumes:
+      - /docker/appdata/minecraft:/data
