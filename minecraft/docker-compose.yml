@@ -17,6 +17,7 @@ services:
       MAX_MEMORY: "6G"
       VERSION: "1.21"
       MOTD: "Let's get it started in here"
+      SEED: "-2694942683531129739"
       DIFFICULTY: "normal"
       SNOOPER_ENABLED: "false"
       ALLOW_FLIGHT: "true"
