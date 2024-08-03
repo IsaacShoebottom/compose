@@ -60,6 +60,8 @@ services:
         netherportalfix
         dismount-entity
         plasmo-voice
+        double-doors
+        appleskin
         jei
     volumes:
       - /docker/appdata/minecraft:/data
