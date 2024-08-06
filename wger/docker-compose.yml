@@ -11,7 +11,7 @@ services:
     container_name: wger_web
     environment:
       - DJANGO_DB_ENGINE=django.db.backends.sqlite3
-      - DJANGO_DB_DATABASE=/home/wger/src/db/database.sqlite # Within the container, so be careful
+      - DJANGO_DB_DATABASE=/home/wger/db/database.sqlite # Within the container, so be careful
       - DJANGO_DB_DATABASE=wger
       - DJANGO_DB_USER=wger
       - DJANGO_DB_PASSWORD=wger
@@ -50,7 +50,7 @@ services:
     env_file:
       - ../stack.env
     volumes:
-      - /docker/appdata/wger/db:/home/wger/src/db
+      - /docker/appdata/wger/db:/home/wger/db
       - /docker/appdata/wger/static:/home/wger/static
       - /docker/appdata/wger/media:/home/wger/media
     expose:
