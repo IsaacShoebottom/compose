@@ -29,13 +29,7 @@ services:
       - MIN_ACCOUNT_AGE_TO_TRUST=21
       - DOWNLOAD_INGREDIENTS_FROM=WGER
       - USE_CELERY=False
-      - AXES_ENABLED=True
-      - AXES_FAILURE_LIMIT=10
-      - AXES_COOLOFF_TIME=30 # in minutes
-      - AXES_HANDLER=axes.handlers.cache.AxesCacheHandler
-      - AXES_LOCKOUT_PARAMETERS=ip_address
-      - AXES_IPWARE_PROXY_COUNT=1
-      - AXES_IPWARE_META_PRECEDENCE_ORDER=HTTP_X_FORWARDED_FOR,REMOTE_ADDR
+      - AXES_ENABLED=False
       - DJANGO_DEBUG=False
       - WGER_USE_GUNICORN=True
       - EXERCISE_CACHE_TTL=18000 # in seconds - 5*60*60, 5 hours
