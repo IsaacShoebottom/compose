@@ -9,16 +9,45 @@ services:
   web:
     image: wger/server:latest
     container_name: wger_web
-    depends_on:
-      db:
-        condition: service_healthy
-      cache:
-        condition: service_healthy
+    environment:
+      - DJANGO_DB_ENGINE=django.db.backends.sqlite3
+      - DJANGO_DB_DATABASE=/home/wger/db/database.sqlite # Within the container, so be careful
+      - DJANGO_PERFORM_MIGRATIONS=True # Perform any new database migrations on startup
+      - TZ=America/Moncton
+      - CSRF_TRUSTED_ORIGINS=https://wger.shoebottom.ca
+      - X_FORWARDED_PROTO_HEADER_SET=True
+      - MEDIA_URL=https://wger.shoebottom.ca/media/
+      - STATIC_URL=https://wger.shoebottom.ca/static/
+      - WGER_INSTANCE=https://wger.de # Wger instance from which to sync exercises, images, etc.
+      - ALLOW_REGISTRATION=True
+      - ALLOW_GUEST_USERS=True
+      - ALLOW_UPLOAD_VIDEOS=False
+      - MIN_ACCOUNT_AGE_TO_TRUST=21
+      - DOWNLOAD_INGREDIENTS_FROM=WGER
+      - USE_CELERY=False
+      - AXES_ENABLED=True
+      - AXES_FAILURE_LIMIT=10
+      - AXES_COOLOFF_TIME=30 # in minutes
+      - AXES_HANDLER=axes.handlers.cache.AxesCacheHandler
+      - AXES_LOCKOUT_PARAMETERS=ip_address
+      - AXES_IPWARE_PROXY_COUNT=1
+      - AXES_IPWARE_META_PRECEDENCE_ORDER=HTTP_X_FORWARDED_FOR,REMOTE_ADDR
+      - DJANGO_DEBUG=False
+      - WGER_USE_GUNICORN=True
+      - EXERCISE_CACHE_TTL=18000 # in seconds - 5*60*60, 5 hours
+      - SITE_URL=https://wger.shoebottom.ca
+      - ACCESS_TOKEN_LIFETIME=10 # The lifetime duration of the access token, in minutes
+      - REFRESH_TOKEN_LIFETIME=24 # The lifetime duration of the refresh token, in hours
+      - USE_RECAPTCHA=False
+      - DJANGO_CLEAR_STATIC_FIRST=True
+      - FROM_EMAIL='wger Workout Manager <wger@shoebottom.com>'
+
     env_file:
       - ../stack.env
     volumes:
-      - /docker/appdata/wger/web/static:/home/wger/static
-      - /docker/appdata/wger/web/media:/home/wger/media
+      - /docker/appdata/wger/db:/home/wger/db
+      - /docker/appdata/wger/static:/home/wger/static
+      - /docker/appdata/wger/media:/home/wger/media
     expose:
       - 8000
     healthcheck:
@@ -36,8 +65,8 @@ services:
       - web
     volumes:
       - /docker/appdata/wger/nginx.conf:/etc/nginx/conf.d/default.conf
-      - /docker/appdata/wger/web/static:/wger/static:ro
-      - /docker/appdata/wger/web/media:/wger/media:ro
+      - /docker/appdata/wger/static:/wger/static:ro
+      - /docker/appdata/wger/media:/wger/media:ro
     ports:
       - "9002:80"
     healthcheck:
@@ -47,67 +76,3 @@ services:
       retries: 5
       start_period: 30s
     restart: unless-stopped
-
-  db:
-    image: postgres:15-alpine
-    container_name: wger_db
-    environment:
-      - POSTGRES_USER=wger
-      - POSTGRES_PASSWORD=wger
-      - POSTGRES_DB=wger
-    volumes:
-      - /docker/appdata/wger/postgres:/var/lib/postgresql/data/
-    expose:
-      - 5432
-    healthcheck:
-      test: pg_isready -U wger
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-    restart: unless-stopped
-
-  cache:
-    image: redis
-    container_name: wger_cache
-    expose:
-      - 6379
-    volumes:
-      - /docker/appdata/wger/cache:/data
-    healthcheck:
-      test: redis-cli ping
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-    restart: unless-stopped
-
-  celery_worker:
-    image: wger/server:latest
-    container_name: wger_worker
-    command: /start-worker
-    env_file:
-      - ../stack.env
-    volumes:
-      - /docker/appdata/wger/web/media:/home/wger/media
-    depends_on:
-      web:
-        condition: service_healthy
-    healthcheck:
-      test: celery -A wger inspect ping
-      interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 30s
-
-  celery_beat:
-    image: wger/server:latest
-    container_name: wger_beat
-    command: /start-beat
-    volumes:
-      - /docker/appdata/wger/beat:/home/wger/beat/
-    env_file:
-      - ../stack.env
-    depends_on:
-      celery_worker:
-        condition: service_healthy
