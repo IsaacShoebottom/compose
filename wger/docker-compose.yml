@@ -23,8 +23,8 @@ services:
       - MEDIA_URL=https://wger.shoebottom.ca/media/
       - STATIC_URL=https://wger.shoebottom.ca/static/
       - WGER_INSTANCE=https://wger.de # Wger instance from which to sync exercises, images, etc.
-      - ALLOW_REGISTRATION=True
-      - ALLOW_GUEST_USERS=True
+      - ALLOW_REGISTRATION=False
+      - ALLOW_GUEST_USERS=False
       - ALLOW_UPLOAD_VIDEOS=False
       - MIN_ACCOUNT_AGE_TO_TRUST=21
       - DOWNLOAD_INGREDIENTS_FROM=WGER
