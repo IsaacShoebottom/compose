@@ -39,8 +39,15 @@ services:
       - USE_RECAPTCHA=False
       - DJANGO_CLEAR_STATIC_FIRST=False
       - FROM_EMAIL='wger Workout Manager <wger@shoebottom.com>'
+      - DJANGO_CACHE_BACKEND=django_redis.cache.RedisCache
+      - DJANGO_CACHE_LOCATION=redis://cache:6379/1
+      - DJANGO_CACHE_TIMEOUT=1296000 # in seconds - 60*60*24*15, 15 Days
+      - DJANGO_CACHE_CLIENT_CLASS=django_redis.client.DefaultClient
     depends_on:
-      - db
+      db:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
     env_file:
       - ../stack.env
     volumes:
@@ -88,6 +95,20 @@ services:
       - "9002:80"
     healthcheck:
       test: service nginx status
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+
+  cache:
+    image: redis
+    expose:
+      - 6379
+    volumes:
+      - /docker/appdata/wger/cache:/data
+    healthcheck:
+      test: redis-cli ping
       interval: 10s
       timeout: 5s
       retries: 5
