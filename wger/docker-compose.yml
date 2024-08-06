@@ -10,8 +10,7 @@ services:
     image: wger/server:latest
     container_name: wger_web
     environment:
-      - DJANGO_DB_ENGINE=django.db.backends.sqlite3
-      - DJANGO_DB_DATABASE=/home/wger/db/database.sqlite # Within the container, so be careful
+      - DJANGO_DB_ENGINE=django.db.backends.postgresql # Within the container, so be careful
       - DJANGO_DB_DATABASE=wger
       - DJANGO_DB_USER=wger
       - DJANGO_DB_PASSWORD=wger
@@ -61,6 +60,24 @@ services:
       timeout: 5s
       start_period: 300s
       retries: 5
+    restart: unless-stopped
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=wger
+      - POSTGRES_PASSWORD=wger
+      - POSTGRES_DB=wger
+    volumes:
+      - /docker/appdata/wger/db:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    healthcheck:
+      test: pg_isready -U wger
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
     restart: unless-stopped
 
   nginx:
