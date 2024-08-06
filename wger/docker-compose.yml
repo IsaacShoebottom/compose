@@ -12,6 +12,12 @@ services:
     environment:
       - DJANGO_DB_ENGINE=django.db.backends.sqlite3
       - DJANGO_DB_DATABASE=/home/wger/src/db/database.sqlite # Within the container, so be careful
+      - DJANGO_DB_DATABASE=wger
+      - DJANGO_DB_USER=wger
+      - DJANGO_DB_PASSWORD=wger
+      - DJANGO_DB_HOST=db
+      - DJANGO_DB_PORT=5432
+      - DJANGO_PERFORM_MIGRATIONS=True # Perform any new database migrations on startup
       - TZ=America/Moncton
       - CSRF_TRUSTED_ORIGINS=https://wger.shoebottom.ca
       - X_FORWARDED_PROTO_HEADER_SET=True
