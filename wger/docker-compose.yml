@@ -31,6 +31,7 @@ services:
 
   nginx:
     image: nginx:stable
+    container_name: wger_nginx
     depends_on:
       - web
     volumes:
