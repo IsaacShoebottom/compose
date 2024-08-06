@@ -45,7 +45,8 @@ services:
       - USE_RECAPTCHA=False
       - DJANGO_CLEAR_STATIC_FIRST=True
       - FROM_EMAIL='wger Workout Manager <wger@shoebottom.com>'
-
+    depends_on:
+      - db
     env_file:
       - ../stack.env
     volumes:
@@ -64,6 +65,7 @@ services:
 
   db:
     image: postgres:15-alpine
+    container_name: wger_db
     environment:
       - POSTGRES_USER=wger
       - POSTGRES_PASSWORD=wger
