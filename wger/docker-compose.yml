@@ -44,7 +44,6 @@ services:
     env_file:
       - ../stack.env
     volumes:
-      - /docker/appdata/wger/db/database.sqlite:/home/wger/db/database.sqlite
       - /docker/appdata/wger/static:/home/wger/static
       - /docker/appdata/wger/media:/home/wger/media
     expose:
