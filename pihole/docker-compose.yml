@@ -4,7 +4,7 @@ version: "3"
 services:
   pihole:
     container_name: pihole
-    image: cbcrowe/pihole-unbound:latest
+    image: pihole/pihole:latest
     # For DHCP it is recommended to remove these ports and instead add: network_mode: "host"
     ports:
       - "53:53/tcp"
@@ -14,7 +14,7 @@ services:
     environment:
       TZ: 'America/Moncton'
       FTLCONF_LOCAL_IPV4: '192.168.2.128'
-      PIHOLE_DNS_: "127.0.0.1#5335"
+      PIHOLE_DNS_: "192.168.2.1#53"
       DNSSEC: "true"
       DNSMASQ_LISTENING: "single"
     # Volumes store your data between container upgrades
