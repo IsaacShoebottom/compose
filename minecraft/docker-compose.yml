@@ -11,6 +11,7 @@ services:
     environment:
       EULA: "TRUE"
       TYPE: "FABRIC"
+      FABRIC_LOADER_VERSION: "0.16.2"
       TZ: "America/Moncton"
       ENABLE_ROLLING_LOGS: "true"
       MAX_MEMORY: "6G"
