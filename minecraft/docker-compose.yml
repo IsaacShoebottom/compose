@@ -63,5 +63,6 @@ services:
         double-doors
         appleskin
         jei
+        viafabric
     volumes:
       - /docker/appdata/minecraft:/data
