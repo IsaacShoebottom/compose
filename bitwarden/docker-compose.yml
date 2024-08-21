@@ -15,6 +15,8 @@ services:
     image: martadams89/bitwarden-sync:latest
     container_name: bitwarden-sync
     restart: always
+    env_file:
+      - ../stack.env
     environment:
       - CRON_SCHEDULE=0 0 * * *
       - BW_SERVER_SOURCE=https://bitwarden.shoebottom.ca
