@@ -18,7 +18,7 @@ services:
     env_file:
       - ../stack.env
     environment:
-      - CRON_SCHEDULE=0 0 * * *
+      - CRON_SCHEDULE=0 */12 * * *
       - BW_SERVER_SOURCE=https://bitwarden.shoebottom.ca
       - BW_SERVER_DEST=https://vault.bitwarden.com
     volumes:
