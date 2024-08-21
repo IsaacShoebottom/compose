@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: always
+    environment:
+      DOMAIN: "https://bitwarden.shoebottom.ca"  # required when using a reverse proxy; your domain; vaultwarden needs to know it's https to work properly with attachments
+      SIGNUPS_ALLOWED: "true" # Deactivate this with "false" after you have created your account so that no strangers can register
+    volumes:
+      - /docker/appdata/bitwarden/vaultwarden:/data # the path before the : can be changed
+    ports:
+      - 11001:80 # you can replace the 11001 with your preferred port
+  bitwarden-sync:
+    image: martadams89/bitwarden-sync:latest
+    container_name: bitwarden-sync
+    restart: always
+    environment:
+      - CRON_SCHEDULE=0 0 * * *
+      - BW_SERVER_SOURCE=https://bitwarden.shoebottom.ca
+      - BW_SERVER_DEST=https://vault.bitwarden.com
+    volumes:
+      - /docker/appdata/bitwarden/sync:/app/backups
