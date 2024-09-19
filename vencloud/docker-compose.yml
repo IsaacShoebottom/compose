@@ -30,7 +30,7 @@ services:
             - PROXY_HEADER=X-Forwarded-For # If not using a reverse proxy, leave this empty
             - SIZE_LIMIT=32000000 # The maximum settings backup size in bytes. Default is 32MB.
             - DISCORD_REDIRECT_URI=https://vencloud.shoebottom.ca/v1/oauth/callback # Under "Redirects", click "Add Redirect" and add your domain with `/v1/oauth/callback` appended to it
-            - ALLOWED_USERS= # List of Discord user IDs allowed to use the service, separated by commas.
+            - ALLOWED_USERS=263739756930793472 # List of Discord user IDs allowed to use the service, separated by commas.
         env_file:
             - ../stack.env
         depends_on:
