@@ -4,7 +4,7 @@ services:
   gotify:
     container_name: gotify
     hostname: gotify.local
-    image: gotify/server
+    image: gotify/server:latest
     restart: unless-stopped
     ports:
       - 8085:80

@@ -4,7 +4,7 @@
 version: '3.7'
 services:
   radicale:
-    image: tomsquest/docker-radicale
+    image: tomsquest/docker-radicale:latest
     container_name: radicale
     ports:
       - 5232:5232
