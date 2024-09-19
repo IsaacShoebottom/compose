@@ -21,7 +21,7 @@ services:
     image: nextcloud:apache
     restart: always
     ports:
-      - 8080:80
+      - 8090:80
     volumes:
       - /docker/appdata/nextcloud/nextcloud:/var/www/html
     environment:
