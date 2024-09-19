@@ -1,5 +1,4 @@
 ## WIP: This is a work in progress. This file is not yet complete. ##
-## TODO: Paths not changed
 ## TODO: ADD JWT Secret
 ## DOCS/REF: https://github.com/ONLYOFFICE/Docker-DocumentServer/blob/master/docker-compose.yml
 
@@ -25,17 +24,14 @@ services:
       #- JWT_HEADER=Authorization
       #- JWT_IN_BODY=true
     ports:
-      - '80:80'
-      - '443:443'
+      - 8091:80
     stdin_open: true
     restart: always
     stop_grace_period: 60s
     volumes:
-       - /var/www/onlyoffice/Data
-       - /var/log/onlyoffice
-       - /var/lib/onlyoffice/documentserver/App_Data/cache/files
-       - /var/www/onlyoffice/documentserver-example/public/files
-       - /usr/share/fonts
+      - /docker/appdata/onlyoffice/onlyoffice:/var/www/onlyoffice/Data
+      - /docker/appdata/onlyoffice/cache:/var/lib/onlyoffice/documentserver/App_Data/cache/files
+      - /usr/share/fonts:/usr/share/fonts
 
   onlyoffice-rabbitmq:
     container_name: onlyoffice-rabbitmq
@@ -55,7 +51,4 @@ services:
     expose:
       - '5432'
     volumes:
-      - postgresql_data:/var/lib/postgresql
-
-volumes:
-  postgresql_data:
+      - /docker/appdata/onlyoffice/postgres:/var/lib/postgresql
