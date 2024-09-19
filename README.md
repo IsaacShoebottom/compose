@@ -1,0 +1,12 @@
+# Services not currently in use
+- wger
+- vikunja
+- nextcloud
+- tinc
+- tdarr
+- onlyoffice
+- atm3
+- headscale
+- feishin
+- code-server
+- handbrake
