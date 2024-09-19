@@ -31,5 +31,4 @@ services:
     restart: unless-stopped
     volumes:
       - /docker/appdata/radicale/data:/data
-      - /docker/appdata/radicale/config:/config
-      - /docker/appdata/radicale/config/config:/etc/radicale/config
+      - /docker/appdata/radicale/config:/config:ro
