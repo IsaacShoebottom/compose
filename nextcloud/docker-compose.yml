@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  db:
+    container_name: nextcloud_db
+    image: postgres:alpine
+    restart: always
+    volumes:
+      - /docker/appdata/nextcloud/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=nextcloud
+      - POSTGRES_USER=nextcloud
+
+  redis:
+    image: redis:alpine
+    restart: always
+
+  app:
+    container_name: nextcloud_app
+    image: nextcloud:apache
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /docker/appdata/nextcloud/nextcloud:/var/www/html
+    environment:
+      - POSTGRES_HOST=db
+      - REDIS_HOST=redis
+      - POSTGRES_PASSWORD=
+      - POSTGRES_DB=nextcloud
+      - POSTGRES_USER=nextcloud
+    depends_on:
+      - db
+      - redis
+
+  cron:
+    container_name: nextcloud_cron
+    image: nextcloud:apache
+    restart: always
+    volumes:
+      - /docker/appdata/nextcloud/nextcloud:/var/www/html
+    entrypoint: /cron.sh
+    depends_on:
+      - db
+      - redis
