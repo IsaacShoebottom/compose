@@ -8,11 +8,12 @@ services:
     volumes:
       - /docker/appdata/nextcloud/postgres:/var/lib/postgresql/data
     environment:
-      - POSTGRES_PASSWORD=
+      - POSTGRES_PASSWORD=nextcloud
       - POSTGRES_DB=nextcloud
       - POSTGRES_USER=nextcloud
 
   redis:
+    container_name: nextcloud_redis
     image: redis:alpine
     restart: always
 
@@ -26,10 +27,10 @@ services:
       - /docker/appdata/nextcloud/nextcloud:/var/www/html
     environment:
       - POSTGRES_HOST=db
-      - REDIS_HOST=redis
-      - POSTGRES_PASSWORD=
       - POSTGRES_DB=nextcloud
       - POSTGRES_USER=nextcloud
+      - POSTGRES_PASSWORD=nextcloud
+      - REDIS_HOST=redis
     depends_on:
       - db
       - redis
