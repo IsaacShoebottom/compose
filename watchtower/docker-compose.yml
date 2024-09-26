@@ -16,7 +16,3 @@ services:
       - WATCHTOWER_DISABLE_CONTAINERS="pihole minecraft atm3 handbrake culturalconnections xeditmirror"
     env_file:
       - ../stack.env
-networks:
- default:
-   name: "ubuntu-server"
-   external: true

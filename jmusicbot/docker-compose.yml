@@ -6,7 +6,3 @@ services:
     restart: unless-stopped
     volumes:
      - /docker/appdata/jmusicbot:/jmb/config
-networks:
- default:
-   name: "ubuntu-server"
-   external: true
