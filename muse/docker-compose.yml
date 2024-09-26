@@ -2,7 +2,7 @@ version: '3.4'
 services:
   muse:
     container_name: muse
-    image: codetheweb/muse:latest
+    image: ghcr.io/museofficial/muse:latest
     restart: unless-stopped
     volumes:
       - /docker/appdata/muse/data:/data
@@ -10,7 +10,3 @@ services:
       - ../stack.env
     environment:
       - REGISTER_COMMANDS_ON_BOT=true
-networks:
- default:
-   name: "ubuntu-server"
-   external: true
