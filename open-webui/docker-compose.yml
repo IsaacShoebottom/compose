@@ -8,7 +8,7 @@ services:
     ports:
       - 9009:8080
     environment:
-      - 'OLLAMA_BASE_URL=http://localhost:11434'
+      - 'OLLAMA_BASE_URL=http://192.168.2.128:11434'
       # - 'WEBUI_SECRET_KEY=' Set this for jwt secret key. Should be rendomly generated at start
     extra_hosts:
       - host.docker.internal:host-gateway
