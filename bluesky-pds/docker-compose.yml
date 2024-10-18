@@ -1,3 +1,4 @@
+# Helpful guide: https://therobbiedavis.com/selfhosting-bluesky-with-docker-and-swag/
 services:
   pds:
     container_name: pds
