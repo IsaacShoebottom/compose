@@ -3,7 +3,7 @@ services:
     container_name: pds
     image: ghcr.io/bluesky-social/pds:latest
     ports:
-      - 3000:3000
+      - 3003:3000
     restart: unless-stopped
     environment:
       - PDS_HOSTNAME=shoebottom.ca
