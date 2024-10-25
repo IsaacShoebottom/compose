@@ -1,4 +1,3 @@
-version: "3.6"
 services:
   vaultwarden:
     image: vaultwarden/server:latest
@@ -7,6 +6,7 @@ services:
     environment:
       DOMAIN: "https://bitwarden.shoebottom.ca"  # required when using a reverse proxy; your domain; vaultwarden needs to know it's https to work properly with attachments
       SIGNUPS_ALLOWED: "false" # Deactivate this with "false" after you have created your account so that no strangers can register
+      WEBSOCKETS_ENABLED: "true" # Enable push notifications and login requests
     volumes:
       - /docker/appdata/bitwarden/vaultwarden:/data # the path before the : can be changed
     ports:
