@@ -48,7 +48,6 @@ services:
         recipecooldown
         slumber
         achievements-optimizer
-        disable-portal-checks
         helpfulcommands
         headfix
         sdlink
