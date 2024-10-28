@@ -13,6 +13,7 @@ services:
       TYPE: "FABRIC"
       TZ: "America/Moncton"
       ENABLE_ROLLING_LOGS: "true"
+      FABRIC_LOADER_VERSION: "0.16.8"
       MAX_MEMORY: "6G"
       VERSION: "1.21"
       MOTD: "Let's get it started in here"
