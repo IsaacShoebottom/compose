@@ -14,7 +14,7 @@ services:
       TZ: "America/Moncton"
       ENABLE_ROLLING_LOGS: "true"
       MAX_MEMORY: "6G"
-      VERSION: "1.21.0"
+      VERSION: "1.21"
       MOTD: "Let's get it started in here"
       SEED: "-2694942683531129739"
       DIFFICULTY: "normal"
