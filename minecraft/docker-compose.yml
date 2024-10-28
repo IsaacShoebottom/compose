@@ -62,5 +62,7 @@ services:
         appleskin
         jei
         viafabric
+        disable-portal-checks
+        disconnect-packet-fix
     volumes:
       - /docker/appdata/minecraft:/data
