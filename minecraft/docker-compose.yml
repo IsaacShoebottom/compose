@@ -50,7 +50,6 @@ services:
         achievements-optimizer
         disable-portal-checks
         helpfulcommands
-        disconnect-packet-fix
         headfix
         sdlink
         dynmap
