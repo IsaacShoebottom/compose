@@ -37,6 +37,7 @@ services:
       # jei
       # railoptimization
       # modernfix
+      # c2me-fabric
       MODRINTH_PROJECTS: |
         fabric-api
         lithium
@@ -46,7 +47,6 @@ services:
         no-chat-reports
         vmp-fabric
         noisium
-        c2me-fabric
         leaves-be-gone
         servercore
         alternate-current
