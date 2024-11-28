@@ -36,11 +36,11 @@ services:
       # achievements-optimizer
       # jei
       # railoptimization
+      # modernfix
       MODRINTH_PROJECTS: |
         fabric-api
         lithium
         ferrite-core
-        modernfix
         krypton
         debugify
         no-chat-reports
