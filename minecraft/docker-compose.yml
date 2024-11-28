@@ -35,6 +35,7 @@ services:
       # faster-random
       # achievements-optimizer
       # jei
+      # railoptimization
       MODRINTH_PROJECTS: |
         fabric-api
         lithium
@@ -50,7 +51,6 @@ services:
         servercore
         alternate-current
         ksyxis
-        railoptimization
         recipecooldown
         slumber
         helpfulcommands
