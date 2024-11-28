@@ -27,12 +27,14 @@ services:
       MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
       # sdlink for discord integration
       # dynmap for map viewer
-      # Disabled mods
+      # Disabled mods:
       # dynmap
       # disable-portal-checks
       # fastback
       # headfix
       # faster-random
+      # achievements-optimizer
+      # jei
       MODRINTH_PROJECTS: |
         fabric-api
         lithium
@@ -51,7 +53,6 @@ services:
         railoptimization
         recipecooldown
         slumber
-        achievements-optimizer
         helpfulcommands
         sdlink
         sessility
@@ -61,7 +62,6 @@ services:
         plasmo-voice
         double-doors
         appleskin
-        jei
         viafabric
         disconnect-packet-fix
     volumes:
