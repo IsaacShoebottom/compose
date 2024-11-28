@@ -27,6 +27,10 @@ services:
       MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
       # sdlink for discord integration
       # dynmap for map viewer
+      # Disabled mods
+      # dynmap
+      # disable-portal-checks
+      # fastback
       MODRINTH_PROJECTS: |
         fabric-api
         lithium
@@ -50,8 +54,6 @@ services:
         helpfulcommands
         headfix
         sdlink
-        dynmap
-        fastback
         sessility
         rightclickharvest
         netherportalfix
@@ -61,7 +63,6 @@ services:
         appleskin
         jei
         viafabric
-        disable-portal-checks
         disconnect-packet-fix
     volumes:
       - /docker/appdata/minecraft:/data
