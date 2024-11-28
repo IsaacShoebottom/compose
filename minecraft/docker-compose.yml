@@ -1,4 +1,3 @@
-version: "3"
 services:
   mc:
     container_name: minecraft
@@ -23,6 +22,7 @@ services:
       ENABLE_RCON: "true"
       USE_AIKAR_FLAGS: "true"
       OPS: "IsaacDaybreak"
+      REMOVE_OLD_MODS: "true"
       MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
       MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
       # sdlink for discord integration
