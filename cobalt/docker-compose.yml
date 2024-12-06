@@ -1,10 +1,9 @@
-version: '3.5'
-
+# https://github.com/imputnet/cobalt/blob/main/docs/run-an-instance.md
 services:
     cobalt-api:
-        image: ghcr.io/imputnet/cobalt:7
+        image: ghcr.io/imputnet/cobalt:latest
         restart: unless-stopped
-        container_name: cobalt-api
+        container_name: cobalt
         init: true
         ports:
             - 9000:9000/tcp
@@ -12,7 +11,7 @@ services:
             #- 127.0.0.1:9000:9000
         environment:
             # replace https://api.cobalt.tools/ with your instance's target url in same format
-            API_URL: "https://cobalt-api.shoebottom.ca/"
+            API_URL: "https://cobalt.shoebottom.ca/"
             # replace eu-nl with your instance's distinctive name
             API_NAME: "ca-nb-irs"
             # if you want to use cookies when fetching data from services, uncomment the next line and the lines under volume
@@ -21,17 +20,3 @@ services:
         # if you want to use cookies when fetching data from services, uncomment volumes and next line
         #volumes:
             #- ./cookies.json:/cookies.json
-    cobalt-web:
-        image: ghcr.io/imputnet/cobalt:7
-        restart: unless-stopped
-        container_name: cobalt-web
-        init: true
-        ports:
-            - 9001:9001/tcp
-            # if you're using a reverse proxy, uncomment the next line and remove the one above (9001:9001/tcp):
-            #- 127.0.0.1:9001:9001
-        environment:
-            # replace https://cobalt.tools/ with your instance's target url in same format
-            WEB_URL: "https://cobalt.shoebottom.ca/"
-            # replace https://api.cobalt.tools/ with preferred api instance url
-            API_URL: "https://cobalt-api.shoebottom.ca/"
