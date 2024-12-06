@@ -5,6 +5,7 @@ services:
         restart: unless-stopped
         container_name: cobalt
         init: true
+        read_only: true
         ports:
             - 9000:9000/tcp
             # if you're using a reverse proxy, uncomment the next line and remove the one above (9000:9000/tcp):
@@ -16,7 +17,8 @@ services:
             API_NAME: "ca-nb-irs"
             # if you want to use cookies when fetching data from services, uncomment the next line and the lines under volume
             # COOKIE_PATH: "/cookies.json"
-            # see docs/run-an-instance.md for more information
-        # if you want to use cookies when fetching data from services, uncomment volumes and next line
+            # Uncomment to enable api key
+            # API_KEY_URL: "file:///keys.json"
         #volumes:
-            #- ./cookies.json:/cookies.json
+            #- /docker/appdata/cobalt/cookies.json:/cookies.json:ro
+            #- /docker/appdata/cobalt/keys.json:/keys.json:ro
