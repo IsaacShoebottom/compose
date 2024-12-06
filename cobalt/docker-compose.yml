@@ -1,6 +1,6 @@
 # https://github.com/imputnet/cobalt/blob/main/docs/run-an-instance.md
 services:
-    cobalt-api:
+    cobalt:
         image: ghcr.io/imputnet/cobalt:latest
         restart: unless-stopped
         container_name: cobalt
