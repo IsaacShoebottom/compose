@@ -29,6 +29,16 @@ hash = "e3f783bcc6ff818d804d3c6022d8ac08ae41e3c01171445a0358bff9d9f45387"
 metafile = true
 
 [[files]]
+file = "mods/blossomlib.pw.toml"
+hash = "dee34336edeb00799560138a92ccd6444f81c529a1cc3f24c7d22c1db4cb78d3"
+metafile = true
+
+[[files]]
+file = "mods/blossomwarps.pw.toml"
+hash = "97a4639cc797637e3e739ff34605455cadec28e13f63fa801e09b036d34ba1db"
+metafile = true
+
+[[files]]
 file = "mods/c2me-fabric.pw.toml"
 hash = "ee2851f9fa059ab4a243fb6f7ba58f9d4d2e586aee9b8ea3859e13d59a6386f1"
 metafile = true
