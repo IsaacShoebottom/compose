@@ -1,0 +1,13 @@
+name = "Sessility"
+filename = "sessility-fabric-mod-0.6.4.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/G9rHXWug/versions/tPl3eOSA/sessility-fabric-mod-0.6.4.jar"
+hash-format = "sha512"
+hash = "cfc93b1ca9516f5b07ca6ef8a3aa8122478ac4040ad6f1cccec8587d35b443b9ecf396657e06fcf2e7e3097a302ce920d03bead586b959dab47c0504cfcf6815"
+
+[update]
+[update.modrinth]
+mod-id = "G9rHXWug"
+version = "tPl3eOSA"

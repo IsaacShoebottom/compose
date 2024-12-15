@@ -1,0 +1,13 @@
+name = "Helpful Commands"
+filename = "helpfulcommands-3.2.0-1.21.2-1.21.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/lIRUH8gT/versions/S3gsNCL9/helpfulcommands-3.2.0-1.21.2-1.21.3.jar"
+hash-format = "sha512"
+hash = "9401a81636a1874c80e091c3807d0d26fc9c53805d79035f883c3aa298948d9e39ca28146a72f889d61eab70edce9350ab0d6a4534ef495de3f3352355c79b75"
+
+[update]
+[update.modrinth]
+mod-id = "lIRUH8gT"
+version = "S3gsNCL9"

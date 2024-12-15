@@ -1,0 +1,171 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/alternate-current.pw.toml"
+hash = "d096d46cd17123c2e28271cc98a791d6a452a2d2b59acdfe53c18127a7b6604e"
+metafile = true
+
+[[files]]
+file = "mods/appleskin.pw.toml"
+hash = "417e4f42790407e6fb4dfcb03cd4abcdf3aa00f4dcef3f3a2edec1a3e1a9a3ef"
+metafile = true
+
+[[files]]
+file = "mods/architectury-api.pw.toml"
+hash = "c517eccd62ae7e0b30463a781f243fa608ace64f8734862e8813fc6082e7c337"
+metafile = true
+
+[[files]]
+file = "mods/balm.pw.toml"
+hash = "ae4bbb91a1c7506d58a7d1f7dce095358bc84933c6942e9f462d1da0453d80ef"
+metafile = true
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "4c86841a5f21942896ac2524a4197d3231c30734015c184e54b698018e1f06ae"
+metafile = true
+
+[[files]]
+file = "mods/collective.pw.toml"
+hash = "81bedf03407dc7bce461e28e84ba38a4f289848272e3f5b67c4ebcf6ea7bb22f"
+metafile = true
+
+[[files]]
+file = "mods/craterlib.pw.toml"
+hash = "8d6953e79ed890486dfd960ebf8ede73dd9f25ed1b7300a611829ac725a9827a"
+metafile = true
+
+[[files]]
+file = "mods/debugify.pw.toml"
+hash = "4d2c83341f911e62074b763440f5b8553096c66dadd599c61cb74493ec99d079"
+metafile = true
+
+[[files]]
+file = "mods/disconnect-packet-fix.pw.toml"
+hash = "5c9f7094a4327e0730966e4a58617456695fbcbaedae3f79903ea6a1d939fc6e"
+metafile = true
+
+[[files]]
+file = "mods/dismount-entity.pw.toml"
+hash = "9d613f8f3c2847e66360c4d9f48c15a0e65d9791d82fd56a24d9940d69339f6f"
+metafile = true
+
+[[files]]
+file = "mods/double-doors.pw.toml"
+hash = "b1541933000baf1c2daf10706029891fddd45d2244b0c944be224a0f02a0a586"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "129e8e41a2c4da6b61ca3818cd98f0759f40e39fbac367d45a30511e76c2ac37"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "bfd0e9e0e3ba950e458caf9687e2ebbf0a3c4e1f2f97259a25242f5649e808a9"
+metafile = true
+
+[[files]]
+file = "mods/forge-config-api-port.pw.toml"
+hash = "b701d9bc04e6854683da1ba6cadc2c07f719c339a505908bf0e1a2baf0fc39e1"
+metafile = true
+
+[[files]]
+file = "mods/helpfulcommands.pw.toml"
+hash = "71ec3a043cb81a05c717a7d49981ee2a2a57a1064068594581e79873c16cb5b8"
+metafile = true
+
+[[files]]
+file = "mods/jamlib.pw.toml"
+hash = "a1d61c504dafcf7964580334f8343b0a49bd6163c60f342c36f6fd21458e9e22"
+metafile = true
+
+[[files]]
+file = "mods/krypton.pw.toml"
+hash = "c4e45594c8d1ab3dacc3b49142f16fb253178dd31d97cc917bf4a4d54f21e081"
+metafile = true
+
+[[files]]
+file = "mods/ksyxis.pw.toml"
+hash = "3dd9d3933a5a332de135d0ecf252d367844ea71e895fc63648fc7339b95feeb3"
+metafile = true
+
+[[files]]
+file = "mods/leaves-be-gone.pw.toml"
+hash = "0b680bee01d07a6056ea04f42585c35e657a133deaacc842a75ec78f418939bf"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "0d50516f7ba174f3bc8fb4c12e1200d82649ca5e3b3f42de408d420bfa13fd2d"
+metafile = true
+
+[[files]]
+file = "mods/netherportalfix.pw.toml"
+hash = "28ca6fb8a27dbf51d4f0792fb7c31a41006031d973ab301c9018f1a6549f0293"
+metafile = true
+
+[[files]]
+file = "mods/no-chat-reports.pw.toml"
+hash = "477ee00ae9c0473f452c78a3191428a5758486c4e74955e0fc741481fc5dc14b"
+metafile = true
+
+[[files]]
+file = "mods/noisium.pw.toml"
+hash = "1d1edcd545d8ce0252488071aaa0d69fb7bfe9a937a21117f00e4b122f049ce3"
+metafile = true
+
+[[files]]
+file = "mods/plasmo-voice.pw.toml"
+hash = "69978a1d8c82ca0a8ad08bd79b7831a499407dd46a1b721a97bb393a9454b0bf"
+metafile = true
+
+[[files]]
+file = "mods/puzzles-lib.pw.toml"
+hash = "8c2f0aa3249837076b9761c4fc7ebad2645cf6b3f5bd11ec02af27c60c0c7af5"
+metafile = true
+
+[[files]]
+file = "mods/recipecooldown.pw.toml"
+hash = "43fbc9b70f49998be45314b9b557e925988825a204190be01ccbae5cc2df74df"
+metafile = true
+
+[[files]]
+file = "mods/rightclickharvest.pw.toml"
+hash = "ad8b556c07151c02ea69a5bb6c39973af8d2a924e20eeeb55e9183d0b6faf1ba"
+metafile = true
+
+[[files]]
+file = "mods/sdlink.pw.toml"
+hash = "c3f567f9982b0a9386a87aba4e80556421f3af4d2f06ec240374fa6af0e28d77"
+metafile = true
+
+[[files]]
+file = "mods/servercore.pw.toml"
+hash = "62a1bed98b39caa7582c070a2a742d69e4acdbf5b90ea10310c6cdca1c32624a"
+metafile = true
+
+[[files]]
+file = "mods/sessility.pw.toml"
+hash = "0d3f5351366aaa9c226fc000d6aa00daabde47dc8036dd1b4cf5b641ed556b0c"
+metafile = true
+
+[[files]]
+file = "mods/slumber.pw.toml"
+hash = "126609a84d438d7b9beb1e4d1a27139e8968ea84898d91dc295a0564c9b417b1"
+metafile = true
+
+[[files]]
+file = "mods/viafabric.pw.toml"
+hash = "cf40f88ab3279941fe6d3ff10cf8f68977282c88e16a87ed553d3035be85a5a4"
+metafile = true
+
+[[files]]
+file = "mods/vmp-fabric.pw.toml"
+hash = "a0478c37ec11704dc5136a4e92e9e0b54e3dc89e114bc6504692e8adfe4d423c"
+metafile = true
+
+[[files]]
+file = "mods/yacl.pw.toml"
+hash = "c56da2f5a3c6f6eef3b46a46141c5cb4e85f2e63126e69018f214676343f92b9"
+metafile = true

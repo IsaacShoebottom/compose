@@ -1,0 +1,13 @@
+name = "PieceOfWood"
+author = "Isaac Shoebottom"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "32cea6b1d13ae5ee62ee38c828de7ffaf50f73acc597a7f658189162de73f8ef"
+
+[versions]
+fabric = "0.16.9"
+minecraft = "1.21.3"

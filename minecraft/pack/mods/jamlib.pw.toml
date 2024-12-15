@@ -1,0 +1,13 @@
+name = "JamLib"
+filename = "jamlib-fabric-1.2.1-build.2+1.21.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/IYY9Siz8/versions/IAPgISUT/jamlib-fabric-1.2.1-build.2%2B1.21.3.jar"
+hash-format = "sha512"
+hash = "2e273630773d811c53c61c7719c7c19bbb5811d2e02f2a4756de08b261589c83b01e35ecb0022f03af6684103ad3973ddda80c4fa14375773e068123069a9597"
+
+[update]
+[update.modrinth]
+mod-id = "IYY9Siz8"
+version = "IAPgISUT"
