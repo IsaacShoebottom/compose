@@ -1,0 +1,13 @@
+name = "Compact Help Command"
+filename = "compacthelpcommand-1.21.4-2.7.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/XdiGl7ZL/versions/TivaOLr7/compacthelpcommand-1.21.4-2.7.jar"
+hash-format = "sha512"
+hash = "c74e3aeebdc0b4f5a8e671745081e948ad472f074cffec330ab694c874aa4d50061edc4708fdd80f53be2bccff5606254ac68bdb479aa27d3d343a5ab2e79af4"
+
+[update]
+[update.modrinth]
+mod-id = "XdiGl7ZL"
+version = "TivaOLr7"

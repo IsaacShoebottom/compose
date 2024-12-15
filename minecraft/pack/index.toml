@@ -29,16 +29,6 @@ hash = "e3f783bcc6ff818d804d3c6022d8ac08ae41e3c01171445a0358bff9d9f45387"
 metafile = true
 
 [[files]]
-file = "mods/blossomlib.pw.toml"
-hash = "dee34336edeb00799560138a92ccd6444f81c529a1cc3f24c7d22c1db4cb78d3"
-metafile = true
-
-[[files]]
-file = "mods/blossomwarps.pw.toml"
-hash = "97a4639cc797637e3e739ff34605455cadec28e13f63fa801e09b036d34ba1db"
-metafile = true
-
-[[files]]
 file = "mods/c2me-fabric.pw.toml"
 hash = "ee2851f9fa059ab4a243fb6f7ba58f9d4d2e586aee9b8ea3859e13d59a6386f1"
 metafile = true
@@ -51,6 +41,11 @@ metafile = true
 [[files]]
 file = "mods/collective.pw.toml"
 hash = "49349d6789c8d49c469d98f0796b260df8f9534625fddd60c37a0bd197dce225"
+metafile = true
+
+[[files]]
+file = "mods/compact-help-command.pw.toml"
+hash = "96fb87e87ce84bef8d4d50e90082b4ebfc7a3fe06c21bdca70bed2a874af3fa3"
 metafile = true
 
 [[files]]
@@ -79,8 +74,18 @@ hash = "bae6c7361d1a1dd2ff099c563226526fd86069d68f6bb242bbae1a610a173204"
 metafile = true
 
 [[files]]
+file = "mods/fabric-language-kotlin.pw.toml"
+hash = "3d0bf4d56ea941f856200934fdc2fb4952fe513d469f47bdb5fc586f99f16097"
+metafile = true
+
+[[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "1ef554f7a8d5f7ed4bc21316e034eeef3430dc306012c0a706bd4c3e4ac253aa"
+metafile = true
+
+[[files]]
+file = "mods/followers-teleport-too.pw.toml"
+hash = "c2e3a784ac7202941c4f3adfa500133f91f844417e56683ba7dd1a0b150b6a77"
 metafile = true
 
 [[files]]
@@ -149,6 +154,11 @@ hash = "85ae542e2ccfb61bcdd3aa55b1a56436782687ba63388e249cb98376737045d4"
 metafile = true
 
 [[files]]
+file = "mods/ping-wheel.pw.toml"
+hash = "8801b779ee16367851cdc838370dfec7c73d2fb180e4d939bea6dac61d752060"
+metafile = true
+
+[[files]]
 file = "mods/plasmo-voice.pw.toml"
 hash = "3dc5c2ae7db409f60bbec59830ba7d2108cdbdd1c6be7e4fa5278220213de558"
 metafile = true
@@ -196,6 +206,11 @@ metafile = true
 [[files]]
 file = "mods/vmp-fabric.pw.toml"
 hash = "d6455abd0deae481e3c40ec33fa388a11c23031971bcf5437330f9aea2f47e45"
+metafile = true
+
+[[files]]
+file = "mods/x-backup.pw.toml"
+hash = "1a6e7e03e8665cd5981cf27c9ba29591adc552484eb7373aefcf442dffff0e26"
 metafile = true
 
 [[files]]

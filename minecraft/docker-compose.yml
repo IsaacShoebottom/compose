@@ -39,7 +39,12 @@ services:
       #   railoptimization (Not updated)
       #   modernfix (Not updated)
       # Maybe add:
-      #   essential-commands (Replace helpfulcommands and blossumwarps)
+      #   essential-commands (Replace helpfulcommands)
+      #   blossumwarps (Warp points)
+      #   blossumtpa (Teleport requests)
+      #   blossumhomes (Home points)
+      #   blossumback (Back command)
+      #   enchanting-commands (Enchanting commands)
       #   luckperms (Permissions, maybe, not sure its needed)
     volumes:
       - /docker/appdata/minecraft:/data
