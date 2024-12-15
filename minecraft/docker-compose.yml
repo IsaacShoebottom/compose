@@ -38,5 +38,8 @@ services:
       #   jei (Not updated)
       #   railoptimization (Not updated)
       #   modernfix (Not updated)
+      # Maybe add:
+      #   essential-commands (Replace helpfulcommands and blossumwarps)
+      #   luckperms (Permissions, maybe, not sure its needed)
     volumes:
       - /docker/appdata/minecraft:/data
