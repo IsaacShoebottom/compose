@@ -12,8 +12,10 @@ services:
       TYPE: "FABRIC"
       TZ: "America/Moncton"
       ENABLE_ROLLING_LOGS: "true"
+      ENABLE_AUTOPAUSE: "true"
+      MAX_TICK_TIME: -1
       MAX_MEMORY: "6G"
-      VERSION: "1.21.3"
+      VERSION: "1.21.4"
       MOTD: "Let's get it started in here"
       SEED: "-2694942683531129739"
       DIFFICULTY: "normal"
@@ -26,44 +28,15 @@ services:
       REMOVE_OLD_MODS: "true"
       MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
       MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
-      # sdlink for discord integration
-      # dynmap for map viewer
       # Disabled mods:
-      # dynmap
-      # disable-portal-checks
-      # fastback
-      # headfix
-      # faster-random
-      # achievements-optimizer
-      # jei
-      # railoptimization
-      # modernfix
-      # c2me-fabric
-      # MODRINTH_PROJECTS: |
-      #   fabric-api
-      #   lithium
-      #   ferrite-core
-      #   krypton
-      #   debugify
-      #   no-chat-reports
-      #   vmp-fabric
-      #   noisium
-      #   leaves-be-gone
-      #   servercore
-      #   alternate-current
-      #   ksyxis
-      #   recipecooldown
-      #   slumber
-      #   helpfulcommands
-      #   sdlink
-      #   sessility
-      #   rightclickharvest
-      #   netherportalfix
-      #   dismount-entity
-      #   plasmo-voice
-      #   double-doors
-      #   appleskin
-      #   viafabric
-      #   disconnect-packet-fix
+      #   dynmap (Not updated)
+      #   disable-portal-checks (Not updated)
+      #   fastback (Not updated)
+      #   headfix (Not updated)
+      #   faster-random (Not updated)
+      #   achievements-optimizer (Not updated)
+      #   jei (Not updated)
+      #   railoptimization (Not updated)
+      #   modernfix (Not updated)
     volumes:
       - /docker/appdata/minecraft:/data

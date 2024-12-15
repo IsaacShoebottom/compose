@@ -1,13 +1,13 @@
 name = "Sessility"
-filename = "sessility-fabric-mod-0.6.4.jar"
+filename = "sessility-fabric-mod-0.7.jar"
 side = "server"
 
 [download]
-url = "https://cdn.modrinth.com/data/G9rHXWug/versions/tPl3eOSA/sessility-fabric-mod-0.6.4.jar"
+url = "https://cdn.modrinth.com/data/G9rHXWug/versions/t6DOfM7s/sessility-fabric-mod-0.7.jar"
 hash-format = "sha512"
-hash = "cfc93b1ca9516f5b07ca6ef8a3aa8122478ac4040ad6f1cccec8587d35b443b9ecf396657e06fcf2e7e3097a302ce920d03bead586b959dab47c0504cfcf6815"
+hash = "173f060e10486d4cba3190569595c310304a8a535293448ff8ce026a1577912dddbdffd6192a66839b27562e2e8cf249abeb1a7335250c52b40e2b461a294826"
 
 [update]
 [update.modrinth]
 mod-id = "G9rHXWug"
-version = "tPl3eOSA"
+version = "t6DOfM7s"
