@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/doubledoors.json5"
+hash = "b3338c29e0c5c152861c71fe3a424590a7313716d010cb491c9185b41c6e3620"
+
+[[files]]
+file = "config/rightclickharvest.json5"
+hash = "480a2a8a40f9e3f2a1f016e0c77ba74d057ed70e574e74f233fabd3bec1d6ae8"
+
+[[files]]
 file = "mods/alternate-current.pw.toml"
 hash = "d096d46cd17123c2e28271cc98a791d6a452a2d2b59acdfe53c18127a7b6604e"
 metafile = true
@@ -137,7 +145,7 @@ metafile = true
 
 [[files]]
 file = "mods/rei.pw.toml"
-hash = "fd9f9969ca944b96b307ec7ab7750375420e99da3da22b1dd9b2ac525390f248"
+hash = "97f250ee1fd7c57a193498c427dd6bbac567785b5c4713001966335ae07b7a5e"
 metafile = true
 
 [[files]]
