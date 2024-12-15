@@ -22,6 +22,7 @@ services:
       ENABLE_RCON: "true"
       USE_AIKAR_FLAGS: "true"
       OPS: "IsaacDaybreak"
+      PACKWIZ_URL: "https://git.shoebottom.ca/IsaacShoebottom/compose/raw/branch/master/minecraft/pack/pack.toml"
       REMOVE_OLD_MODS: "true"
       MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
       MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
@@ -38,31 +39,31 @@ services:
       # railoptimization
       # modernfix
       # c2me-fabric
-      MODRINTH_PROJECTS: |
-        fabric-api
-        lithium
-        ferrite-core
-        krypton
-        debugify
-        no-chat-reports
-        vmp-fabric
-        noisium
-        leaves-be-gone
-        servercore
-        alternate-current
-        ksyxis
-        recipecooldown
-        slumber
-        helpfulcommands
-        sdlink
-        sessility
-        rightclickharvest
-        netherportalfix
-        dismount-entity
-        plasmo-voice
-        double-doors
-        appleskin
-        viafabric
-        disconnect-packet-fix
+      # MODRINTH_PROJECTS: |
+      #   fabric-api
+      #   lithium
+      #   ferrite-core
+      #   krypton
+      #   debugify
+      #   no-chat-reports
+      #   vmp-fabric
+      #   noisium
+      #   leaves-be-gone
+      #   servercore
+      #   alternate-current
+      #   ksyxis
+      #   recipecooldown
+      #   slumber
+      #   helpfulcommands
+      #   sdlink
+      #   sessility
+      #   rightclickharvest
+      #   netherportalfix
+      #   dismount-entity
+      #   plasmo-voice
+      #   double-doors
+      #   appleskin
+      #   viafabric
+      #   disconnect-packet-fix
     volumes:
       - /docker/appdata/minecraft:/data
