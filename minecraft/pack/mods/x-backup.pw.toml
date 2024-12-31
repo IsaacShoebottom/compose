@@ -1,13 +1,13 @@
 name = "X Backup"
-filename = "x-backup-0.3.6+1.21.4.jar"
+filename = "x-backup-0.3.7+1.21.4.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/zJ4gyF5J/versions/WsUYj24n/x-backup-0.3.6%2B1.21.4.jar"
+url = "https://cdn.modrinth.com/data/zJ4gyF5J/versions/zvMdJ1o2/x-backup-0.3.7%2B1.21.4.jar"
 hash-format = "sha512"
-hash = "f6bd67c09abb5ab98a4d7df2544ca5373486d0eeeac724752daa529effe4dc48218a8c2bd83a53f5d2a69067d4656753bb445bd24dba8eb05f28b23c73650747"
+hash = "764241c0c119b0701f550e52b4f5887736b9dab2f7e7afd782fe57e94e00716965b489bd87ba4f5abdf0e70814f7d530d887b9382c3184b80f886c9f00d7ea3b"
 
 [update]
 [update.modrinth]
 mod-id = "zJ4gyF5J"
-version = "WsUYj24n"
+version = "zvMdJ1o2"

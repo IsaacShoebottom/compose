@@ -25,12 +25,12 @@ metafile = true
 
 [[files]]
 file = "mods/balm.pw.toml"
-hash = "4f3a66959a750a79a10931bcd051955372d8dabfbd6ca1cc72362ef8284774a4"
+hash = "beeae7c448dd878ca151af7ef50df1c2a88cb39522aaadcf76c0a5615b29b038"
 metafile = true
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "96d76a6543dcb3a6a9ac65f19323deb7af3b20ea6b6807acafd27ee6683db935"
+hash = "0d04dc4021e5ab51e11b36dce7ce46cbe02111529c3fcd3b7ef3f86b1227e6a1"
 metafile = true
 
 [[files]]
@@ -70,7 +70,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-api.pw.toml"
-hash = "12e4a6fd87fb7b6e7fc5e4c298595a0b2514788b6bc8f9be30988a39dca25460"
+hash = "40aa9a34a6ae8d39fb3e8fb8d7ae2edfd17fee124300a1ea26c65f06cff89de9"
 metafile = true
 
 [[files]]
@@ -105,7 +105,7 @@ metafile = true
 
 [[files]]
 file = "mods/jade.pw.toml"
-hash = "9cc22885c02127ac110f7d519eb4f43710e62ab6b32e4fe8d2257dce01c2e612"
+hash = "127d7a682272ce34d92d7df93b7e495b744a967d894e52d1c59227e96319a95b"
 metafile = true
 
 [[files]]
@@ -136,6 +136,11 @@ metafile = true
 [[files]]
 file = "mods/lithium.pw.toml"
 hash = "b8284c53c59f71991c522d190b4bedb7703a86ba27b900c335f1602aecb1510b"
+metafile = true
+
+[[files]]
+file = "mods/modernfix.pw.toml"
+hash = "348bd2931980c466e83f985747904f271c82ef7e23a4e33bbe9b882b0e7e5c94"
 metafile = true
 
 [[files]]
@@ -210,7 +215,7 @@ metafile = true
 
 [[files]]
 file = "mods/x-backup.pw.toml"
-hash = "b338e69ca2067d69aa0c5f8944981e38c06486698b4f8ec6908d3ebfe647ddec"
+hash = "a211502d3b86987b46506da411882d8167a7c39ee5a7d8776efcfeea01344184"
 metafile = true
 
 [[files]]
