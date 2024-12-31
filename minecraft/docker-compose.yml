@@ -37,7 +37,6 @@ services:
       #   achievements-optimizer (Not updated)
       #   jei (Not updated)
       #   railoptimization (Not updated)
-      #   modernfix (Not updated)
       # Maybe add:
       #   essential-commands (Replace helpfulcommands)
       #   blossumwarps (Warp points)
