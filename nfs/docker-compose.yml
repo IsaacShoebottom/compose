@@ -4,10 +4,10 @@ services:
     container_name: nfs-server
     restart: unless-stopped
     volumes:
-      - /home/isaac/Media:/data
+      - /home/isaac/Media:/nfs
       - /lib/modules:/lib/modules:ro
     environment:
-      - NFS_EXPORT_0='/data * (rw,no_subtree_check)'
+      - NFS_EXPORT_0=/nfs * (rw,no_subtree_check)
     cap_add:
       - SYS_ADMIN
       - SYS_MODULE
