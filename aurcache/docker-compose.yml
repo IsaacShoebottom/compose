@@ -1,0 +1,12 @@
+services:
+    aurcache:
+        image: ghcr.io/lukas-heiligenbrunner/aurcache:latest
+        container_name: aurcache
+        restart: unless-stopped
+        ports:
+        - "8086:8080" # Frontend
+        - "8087:8081" # Repository
+        volumes:
+          - /docker/appdata/aurcache/db:/app/db
+          - /docker/appdata/aurcache/repo:/app/repo
+        privileged: true
