@@ -9,6 +9,6 @@ services:
         volumes:
           - /docker/appdata/aurcache/db:/app/db
           - /docker/appdata/aurcache/repo:/app/repo
-          - /docker/appdata/aurcache/cache:/app/builds
-          - /var/run/docker.sock:/var/run/docker.sock
+        environment:
+          - MAX_CONCURRENT_BUILDS=5
         privileged: true
