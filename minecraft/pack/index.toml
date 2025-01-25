@@ -214,11 +214,6 @@ hash = "2f6deeaf10c0cd2fbd24532d8eebb99e43348d3849ef91a197283b06ff697e8a"
 metafile = true
 
 [[files]]
-file = "mods/x-backup.pw.toml"
-hash = "fe858ffa331b4744d87cfe1000d848242c76e70a1f75bcf4cd85a75a2e1cafb6"
-metafile = true
-
-[[files]]
 file = "mods/yacl.pw.toml"
 hash = "4b7c266cf6c560aec780394f515cbe880c72fb07286f60694823fde3b926f184"
 metafile = true
