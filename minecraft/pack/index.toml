@@ -30,7 +30,7 @@ metafile = true
 
 [[files]]
 file = "mods/c2me-fabric.pw.toml"
-hash = "adc6490f47a277c5738d3bb3798092aef25820f463c41ca4c74bff466bc7fd0e"
+hash = "d185d1808491330eba51328b2c822a823776ab7d4362255507d67a547025616f"
 metafile = true
 
 [[files]]
@@ -125,7 +125,7 @@ metafile = true
 
 [[files]]
 file = "mods/journeymap.pw.toml"
-hash = "b3f00e5cbc3da80cad16eb075a340d6630b2edcb25947bf05913f34800b0002d"
+hash = "b60dc2a03d3536e84af18d8215b52ce4a0fa85ee56ae330e54b130614bc3226f"
 metafile = true
 
 [[files]]
@@ -150,7 +150,7 @@ metafile = true
 
 [[files]]
 file = "mods/modernfix.pw.toml"
-hash = "348bd2931980c466e83f985747904f271c82ef7e23a4e33bbe9b882b0e7e5c94"
+hash = "189ffd9cebd2dd46397826288ab8946429bdd47e1d43e0000159ebbf34757c25"
 metafile = true
 
 [[files]]
