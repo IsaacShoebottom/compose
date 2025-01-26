@@ -10,5 +10,5 @@ services:
           - /docker/appdata/aurcache/db:/app/db
           - /docker/appdata/aurcache/repo:/app/repo
         environment:
-          - MAX_CONCURRENT_BUILDS=5
+          - MAX_CONCURRENT_BUILDS=1
         privileged: true
