@@ -99,6 +99,11 @@ hash = "4b257578b2973f4e99ae3192989f7ba4db19e9eca99ea396a1479c8a6cd9ca88"
 metafile = true
 
 [[files]]
+file = "mods/headfix.pw.toml"
+hash = "99ad0db5e9f8baf2579c2de39f961de3b8df42704d1f38882c71255f686949fa"
+metafile = true
+
+[[files]]
 file = "mods/helpfulcommands.pw.toml"
 hash = "3743197cb95b4b2ad49009f9faba429c97c31e24099d8f8e6e98289f446ac9e7"
 metafile = true
