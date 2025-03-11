@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     environment:
       - GITEA__server__DISABLE_SSH=false
-      - GITEA__server__START_SSH_SERVER=true
+      - GITEA__server__START_SSH_SERVER=false
       - GITEA__server__BUILTIN_SSH_SERVER_USER=git
       - GITEA__server__SSH_DOMAIN=git.shoebottom.ca
     volumes:
