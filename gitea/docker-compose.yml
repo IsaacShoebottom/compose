@@ -3,6 +3,8 @@ services:
     image: gitea/gitea:latest
     container_name: gitea
     restart: unless-stopped
+    environment:
+      - START_SSH_SERVER=true
     volumes:
       - /docker/appdata/gitea/data:/data
       - /etc/timezone:/etc/timezone:ro
