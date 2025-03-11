@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     environment:
       - START_SSH_SERVER=true
-      - BUILTIN_SSH_SERVER_USER=gitea
+      - BUILTIN_SSH_SERVER_USER=git
       - SSH_DOMAIN=git.shoebottom.ca
     volumes:
       - /docker/appdata/gitea/data:/data
