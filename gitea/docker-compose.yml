@@ -4,9 +4,10 @@ services:
     container_name: gitea
     restart: unless-stopped
     environment:
-      - START_SSH_SERVER=true
-      - BUILTIN_SSH_SERVER_USER=git
-      - SSH_DOMAIN=git.shoebottom.ca
+      - GITEA__server__DISABLE_SSH=false
+      - GITEA__server__START_SSH_SERVER=true
+      - GITEA__server__BUILTIN_SSH_SERVER_USER=git
+      - GITEA__server__SSH_DOMAIN=git.shoebottom.ca
     volumes:
       - /docker/appdata/gitea/data:/data
       - /etc/timezone:/etc/timezone:ro
