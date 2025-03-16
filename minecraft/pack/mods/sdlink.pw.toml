@@ -1,13 +1,13 @@
 name = "Simple Discord Link"
-filename = "SimpleDiscordLink-Universal-3.2.1.jar"
+filename = "SimpleDiscordLink-Universal-3.2.3.jar"
 side = "server"
 
 [download]
-url = "https://cdn.modrinth.com/data/Sh0YauEf/versions/AVJaD8ZA/SimpleDiscordLink-Universal-3.2.1.jar"
+url = "https://cdn.modrinth.com/data/Sh0YauEf/versions/gXgTfzl5/SimpleDiscordLink-Universal-3.2.3.jar"
 hash-format = "sha512"
-hash = "b75f10d201509ab9c3ed14b89d369f3d0008a33ac48c38cc1381e1910fbeea4280f1b40973dd945171f2a113266769e78a92777585ade81ea0a27dac1e28a963"
+hash = "dc24de2c7508f84fe00c144170b2bc0ed5a95e5f60652978ae20596f4d8f94cd0d6d1e50575d2d0bd1e11214f02dbf03509661b9d07ab3e41df26b4972ff0e82"
 
 [update]
 [update.modrinth]
 mod-id = "Sh0YauEf"
-version = "AVJaD8ZA"
+version = "gXgTfzl5"

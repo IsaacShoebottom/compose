@@ -1,13 +1,13 @@
 name = "Compact Help Command"
-filename = "compacthelpcommand-1.21.4-2.7.jar"
+filename = "compacthelpcommand-1.21.4-2.8.jar"
 side = "server"
 
 [download]
-url = "https://cdn.modrinth.com/data/XdiGl7ZL/versions/TivaOLr7/compacthelpcommand-1.21.4-2.7.jar"
+url = "https://cdn.modrinth.com/data/XdiGl7ZL/versions/JBHidcCQ/compacthelpcommand-1.21.4-2.8.jar"
 hash-format = "sha512"
-hash = "c74e3aeebdc0b4f5a8e671745081e948ad472f074cffec330ab694c874aa4d50061edc4708fdd80f53be2bccff5606254ac68bdb479aa27d3d343a5ab2e79af4"
+hash = "f0122b470d50584b9c1379e6beb14122124d870a7ebb0fa85a6997bd6f18366f9d3f3473d55737301911ef82b7c170cb4e13ab920e212fd84092420313e4c6a3"
 
 [update]
 [update.modrinth]
 mod-id = "XdiGl7ZL"
-version = "TivaOLr7"
+version = "JBHidcCQ"
