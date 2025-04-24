@@ -1,10 +1,7 @@
 networks:
-  default:
+  ollama-network:
     external:
       name: ollama-network
-    driver: bridge
-    driver_opts:
-      com.docker.network.bridge.name: ollama-network
 
 services:
   ollama:
