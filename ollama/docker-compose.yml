@@ -9,10 +9,3 @@ services:
     restart: unless-stopped
     volumes:
       - /home/isaac/Ollama:/root/.ollama
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
