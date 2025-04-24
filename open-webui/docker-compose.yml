@@ -12,6 +12,6 @@ services:
       # - 'WEBUI_SECRET_KEY=' Set this for jwt secret key. Should be rendomly generated at start
     restart: unless-stopped
     networks:
-      - ollama-network
+      - ollama_default
     depends_on:
       - ollama
