@@ -8,6 +8,10 @@ services:
     ports:
       - 9009:8080
     environment:
-      - 'OLLAMA_BASE_URL=http://127.0.0.1:11434'
+      - 'OLLAMA_BASE_URL=http://ollama-network:11434'
       # - 'WEBUI_SECRET_KEY=' Set this for jwt secret key. Should be rendomly generated at start
     restart: unless-stopped
+    networks:
+      - ollama-network
+    depends_on:
+      - ollama

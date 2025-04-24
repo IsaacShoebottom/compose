@@ -8,3 +8,12 @@ services:
     restart: unless-stopped
     volumes:
       - /home/isaac/Ollama:/root/.ollama
+    networks:
+      - ollama-network
+networks:
+  default:
+    external:
+      name: ollama-network
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: ollama-network
