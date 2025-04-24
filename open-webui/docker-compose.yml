@@ -1,15 +1,13 @@
 services:
   # Eventually once on server with good gpu, use ollama instead of localhost
   open-webui:
-    image: ghcr.io/open-webui/open-webui:dev
+    image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
     volumes:
       - /docker/appdata/open-webui/data:/app/backend/data
     ports:
       - 9009:8080
     environment:
-      - 'OLLAMA_BASE_URL=http://192.168.2.32:11434'
+      - 'OLLAMA_BASE_URL=http://127.0.0.1:11434'
       # - 'WEBUI_SECRET_KEY=' Set this for jwt secret key. Should be rendomly generated at start
-    extra_hosts:
-      - host.docker.internal:host-gateway
     restart: unless-stopped
