@@ -15,3 +15,8 @@ services:
       - ollama_default
     depends_on:
       - ollama
+
+networks:
+  ollama_default:
+    external:
+      name: ollama_default
