@@ -1,0 +1,20 @@
+services:
+  navidrome:
+    container_name: navidrome
+    image: deluan/navidrome:latest
+    user: 1000:1000 # should be owner of volumes
+    ports:
+      - "4533:4533"
+    restart: unless-stopped
+    env_file:
+      - ../stack.env
+    environment:
+      # https://www.navidrome.org/docs/usage/configuration-options/#available-options
+      ND_BASEURL: "https://navidrome.shoebottom.ca"
+      ND_ALBUMPLAYCOUNT: "normalized"
+      ND_RECENTLYADDEDBYMODTIME: "true"
+    volumes:
+      - "/docker/appdata/navidrome/data:/data"
+      - "/home/isaac/Media/Music:/music/normal:ro"
+      - "/home/isaac/Media/Music-HQ:/music/hq:ro"
+      - "/home/isaac/Media/Music-LQ:/music/lq:ro"
