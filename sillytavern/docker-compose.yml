@@ -1,0 +1,16 @@
+services:
+  sillytavern:
+    container_name: sillytavern
+    hostname: sillytavern
+    image: ghcr.io/sillytavern/sillytavern:latest
+    network_mode: host
+    expose:
+      - "8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - "/docker/appdata/sillytavern/config:/home/node/app/config"
+      - "/docker/appdata/sillytavern/data:/home/node/app/data"
+      - "/docker/appdata/sillytavern/plugins:/home/node/app/plugins"
+      - "/docker/appdata/sillytavern/extensions:/home/node/app/public/scripts/extensions/third-party"
+    restart: unless-stopped
