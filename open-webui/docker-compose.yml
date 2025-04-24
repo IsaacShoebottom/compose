@@ -13,8 +13,6 @@ services:
     restart: unless-stopped
     networks:
       - ollama_default
-    depends_on:
-      - ollama
 
 networks:
   ollama_default:
