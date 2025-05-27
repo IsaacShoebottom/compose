@@ -7,6 +7,7 @@ services:
       - "25565:25565/tcp" # minecraft
       - "25565:25565/udp" # plasmo-voice
       - "25566:8123" # dynmap
+      - "25567:8100" # bluemap
     environment:
       EULA: "TRUE"
       TYPE: "FABRIC"
