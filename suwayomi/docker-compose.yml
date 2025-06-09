@@ -50,4 +50,4 @@ services:
     volumes:
       - /docker/appdata/syncyomi/config:/config
     ports:
-      - 8282:8282
+      - 8283:8282
