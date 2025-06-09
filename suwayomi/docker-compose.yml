@@ -24,7 +24,7 @@ services:
 #      - BASIC_AUTH_ENABLED=true
 #      - BASIC_AUTH_USERNAME=manga
 #      - BASIC_AUTH_PASSWORD=hello123
-#      - EXTENSION_REPOS=["http://github.com/orginazation-name/repo-name", "http://github.com/orginazation-name-2/repo-name-2"]
+      - EXTENSION_REPOS=["https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json", "https://raw.githubusercontent.com/Kohi-den/extensions/main/index.min.json"]
     volumes:
       - /docker/appdata/suwayomi/data:/home/suwayomi/.local/share/Tachidesk
     ports:
