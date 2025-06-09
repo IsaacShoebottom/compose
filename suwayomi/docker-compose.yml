@@ -24,9 +24,12 @@ services:
 #      - BASIC_AUTH_ENABLED=true
 #      - BASIC_AUTH_USERNAME=manga
 #      - BASIC_AUTH_PASSWORD=hello123
-      - EXTENSION_REPOS=["https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json", "https://raw.githubusercontent.com/Kohi-den/extensions/main/index.min.json"]
+# Disabled due to takedown: "https://raw.githubusercontent.com/Kohi-den/extensions/main/index.min.json"
+# Backup: "https://raw.githubusercontent.com/yuzono/manga-repo/repo/index.min.json"
+      - EXTENSION_REPOS=["https://raw.githubusercontent.com/keiyoushi/extensions/repo/index.min.json", "https://raw.githubusercontent.com/suwayomi/tachiyomi-extension/repo/index.min.json"]
     volumes:
       - /docker/appdata/suwayomi/data:/home/suwayomi/.local/share/Tachidesk
+      - /home/isaac/Media:/media
     ports:
       - "4567:4567"
     restart: unless-stopped
