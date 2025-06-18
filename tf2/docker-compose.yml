@@ -15,7 +15,7 @@ services:
       - "27020:27020/udp" # SourceTV
       - "27005:27005"     # Incoming
     container_name: tf2-comp
-    image: cm2network/tf2:sourcemod-x64
+    image: cm2network/tf2:sourcemod
     env_file:
       - ../stack.env
     environment:
