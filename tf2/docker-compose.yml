@@ -26,7 +26,7 @@ services:
       - SRCDS_TICKRATE=66
       - SRCDS_MAXPLAYERS=14
       - SRCDS_REGION=0
-      - SRCDS_STARTMAP="mge_chillypunch_final4_fix2"
+      - SRCDS_STARTMAP="cp_process_f12"
       - SRCDS_HOSTNAME="games.shoebottom.ca" #(first launch only)
       - SRCDS_CFG="server.cfg"
       - SRCDS_MAPCYCLE="emptymapcycle.txt" #(value can be overwritten by tf/cfg/server.cfg)
