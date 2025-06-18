@@ -5,14 +5,24 @@ services:
     image: plexinc/pms-docker:latest
     restart: unless-stopped
     network_mode: host
-    group_add:
-      - '109' # Render group
     environment:
       - TZ=America/Moncton
     volumes:
       - /docker/appdata/plex/data:/config
       - /tmp/:/transcode
       - /home/isaac/Media:/data
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     devices:
-      - /dev/dri/renderD128:/dev/dri/renderD128
-      - /dev/dri/renderD129:/dev/dri/renderD129
+      - /dev/nvidia-caps:/dev/nvidia-caps
+      - /dev/nvidia0:/dev/nvidia0
+      - /dev/nvidiactl:/dev/nvidiactl
+      - /dev/nvidia-modeset:/dev/nvidia-modeset
+      - /dev/nvidia-uvm:/dev/nvidia-uvm
+      - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools

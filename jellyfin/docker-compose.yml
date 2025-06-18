@@ -5,8 +5,6 @@ services:
     image: jellyfin/jellyfin:latest
     network_mode: 'host'
     restart: 'unless-stopped'
-    group_add:
-      - '109' # Render group
     environment:
       - JELLYFIN_DATA_DIR=/var/lib/jellyfin
       - JELLYFIN_LOG_DIR=/var/log/jellyfin
@@ -17,6 +15,18 @@ services:
       - /docker/appdata/jellyfin/lib:/var/lib/jellyfin
       - /docker/appdata/jellyfin/log:/var/log/jellyfin
       - /home/isaac/Media:/media
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     devices:
-      - /dev/dri/renderD128:/dev/dri/renderD128
-      - /dev/dri/renderD129:/dev/dri/renderD129
+      - /dev/nvidia-caps:/dev/nvidia-caps
+      - /dev/nvidia0:/dev/nvidia0
+      - /dev/nvidiactl:/dev/nvidiactl
+      - /dev/nvidia-modeset:/dev/nvidia-modeset
+      - /dev/nvidia-uvm:/dev/nvidia-uvm
+      - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
