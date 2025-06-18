@@ -5,9 +5,14 @@ services:
     image: plexinc/pms-docker:latest
     restart: unless-stopped
     network_mode: host
+    group_add:
+      - '109' # Render group
     environment:
       - TZ=America/Moncton
     volumes:
       - /docker/appdata/plex/data:/config
       - /tmp/:/transcode
       - /home/isaac/Media:/data
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/renderD129:/dev/dri/renderD129
