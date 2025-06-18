@@ -1,5 +1,5 @@
 services:
-  tf2:
+  tf2-comp:
     # Allocates a stdin (docker run -i)
     stdin_open: true
     # Allocates a tty (docker run -t)
