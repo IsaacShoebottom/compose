@@ -1,0 +1,33 @@
+services:
+  tf2:
+    # Allocates a stdin (docker run -i)
+    stdin_open: true
+    # Allocates a tty (docker run -t)
+    tty: true
+    # Use the host network, RECOMMENDED.
+    network_mode: bridge
+    # Binds /srv/tf2-dir to /home/steam/tf-dedicated in the container
+    volumes:
+      - /docker/appdata/tf2-comp:/home/steam/tf-dedicated
+    ports:
+      - "27015:27015/udp" # Main game port
+      - "27015:27015/tcp" # Rcon port
+      - "27020:27020/udp" # SourceTV
+      - "27005:27005"     # Incoming
+    container_name: tf2-comp
+    image: cm2network/tf2:sourcemod-x64
+    environment:
+      - SRCDS_PORT=27015
+      - SRCDS_TV_PORT=27020
+      - SRCDS_IP="0.0.0.0" #(local ip to bind)
+      - SRCDS_FPSMAX=300
+      - SRCDS_TICKRATE=66
+      - SRCDS_MAXPLAYERS=14
+      - SRCDS_REGION=0
+      - SRCDS_STARTMAP="cp_process"
+      - SRCDS_HOSTNAME="shoebottom.ca comp" #(first launch only)
+      - SRCDS_CFG="server.cfg"
+      - SRCDS_MAPCYCLE="mapcycle_default.txt" #(value can be overwritten by tf/cfg/server.cfg)
+      - SRCDS_SECURED=1 #(0 to start the server as insecured)
+
+
