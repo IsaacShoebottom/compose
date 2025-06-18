@@ -16,6 +16,8 @@ services:
       - "27005:27005"     # Incoming
     container_name: tf2-comp
     image: cm2network/tf2:sourcemod-x64
+    env_file:
+      - ../stack.env
     environment:
       - SRCDS_PORT=27015
       - SRCDS_TV_PORT=27020
