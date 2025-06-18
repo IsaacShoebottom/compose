@@ -27,7 +27,7 @@ services:
       - SRCDS_MAXPLAYERS=14
       - SRCDS_REGION=0
       - SRCDS_STARTMAP="cp_process"
-      - SRCDS_HOSTNAME="shoebottom.ca comp" #(first launch only)
+      - SRCDS_HOSTNAME="games.shoebottom.ca" #(first launch only)
       - SRCDS_CFG="server.cfg"
       - SRCDS_MAPCYCLE="emptymapcycle.txt" #(value can be overwritten by tf/cfg/server.cfg)
       - SRCDS_SECURED=1 #(0 to start the server as insecured)
