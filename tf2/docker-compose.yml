@@ -1,5 +1,6 @@
 services:
   tf2-comp:
+    restart: unless-stopped
     # Allocates a stdin (docker run -i)
     stdin_open: true
     # Allocates a tty (docker run -t)
