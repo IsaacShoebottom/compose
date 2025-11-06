@@ -11,6 +11,8 @@ services:
       TZ: "America/Moncton"
       ENABLE_ROLLING_LOGS: "true"
       ENABLE_AUTOPAUSE: "true"
+      ENABLE_WHITELIST: "true"
+      EXISTING_WHITELIST_FILE: "SKIP"
       MAX_TICK_TIME: -1
       MAX_MEMORY: "6G"
       VERSION: "1.21.6"
