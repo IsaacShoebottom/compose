@@ -1,0 +1,47 @@
+services:
+  mc2:
+    container_name: minecraft2
+    image: itzg/minecraft-server:java21-alpine
+    restart: unless-stopped
+    ports:
+      - "25570:25565/tcp" # minecraft
+    environment:
+      EULA: "TRUE"
+      TYPE: "FABRIC"
+      TZ: "America/Moncton"
+      ENABLE_ROLLING_LOGS: "true"
+      ENABLE_AUTOPAUSE: "true"
+      MAX_TICK_TIME: -1
+      MAX_MEMORY: "6G"
+      VERSION: "1.21.6"
+      MOTD: "hapy haloweebn"
+      SEED: "-6825950097229403983"
+      DIFFICULTY: "hard"
+      SNOOPER_ENABLED: "false"
+      ALLOW_FLIGHT: "true"
+      ENABLE_RCON: "true"
+      USE_AIKAR_FLAGS: "true"
+      OPS: "IsaacDaybreak"
+      #PACKWIZ_URL: "https://git.shoebottom.ca/IsaacShoebottom/compose/raw/branch/master/minecraft/pack/pack.toml"
+      #REMOVE_OLD_MODS: "true"
+      #MODRINTH_DOWNLOAD_DEPENDENCIES: "required"
+      #MODRINTH_ALLOWED_VERSION_TYPE: "alpha"
+      # Disabled mods:
+      #   dynmap (Not updated)
+      #   disable-portal-checks (Not updated)
+      #   fastback (Not updated)
+      #   headfix (Not updated)
+      #   faster-random (Not updated)
+      #   achievements-optimizer (Not updated)
+      #   jei (Not updated)
+      #   railoptimization (Not updated)
+      # Maybe add:
+      #   essential-commands (Replace helpfulcommands)
+      #   blossumwarps (Warp points)
+      #   blossumtpa (Teleport requests)
+      #   blossumhomes (Home points)
+      #   blossumback (Back command)
+      #   enchanting-commands (Enchanting commands)
+      #   luckperms (Permissions, maybe, not sure its needed)
+    volumes:
+      - /docker/appdata/minecraft2:/data
