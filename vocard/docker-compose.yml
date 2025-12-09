@@ -79,8 +79,8 @@ services:
         networks:
             - vocard
         depends_on:
-            lavalink:
-                condition: service_healthy
+            #lavalink:
+            #    condition: service_healthy
             vocard-db:
                 condition: service_healthy
 
