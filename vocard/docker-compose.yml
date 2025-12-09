@@ -15,11 +15,6 @@ services:
             - vocard
         expose:
             - "2333"
-        healthcheck:
-            test: nc -z -v localhost 2333
-            interval: 10s
-            timeout: 5s
-            retries: 5
 
     spotify-tokener:
         image: ghcr.io/topi314/spotify-tokener:master
@@ -31,11 +26,6 @@ services:
             - vocard
         ports:
             - 49152:49152
-        healthcheck:
-            test: nc -z -v localhost 49152
-            interval: 10s
-            timeout: 5s
-            retries: 5
 
     vocard-db:
        container_name: vocard-db
