@@ -18,6 +18,7 @@ services:
     environment:
       - TZ=America/Moncton # Specify timezone from TZ Database name found here https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
       - LZENDPOINT_ENABLE=true
+      - LZE_SLUG=scrobble
       - JELLYFIN_URL=https://jellyfin.shoebottom.ca
       - PLEX_URL=https://plex.shoebottom.ca
       - MALOJA_URL=http://maloja:42010
