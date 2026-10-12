@@ -15,9 +15,3 @@ services:
       - /docker/appdata/plex/data:/config
       - /tmp/:/transcode
       - /home/isaac/Media:/data
-    group_add:
-      - video
-      - render
-    devices:
-      - /dev/kfd:/dev/kfd
-      - /dev/dri:/dev/dri
