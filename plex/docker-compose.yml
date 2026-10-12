@@ -15,17 +15,9 @@ services:
       - /docker/appdata/plex/data:/config
       - /tmp/:/transcode
       - /home/isaac/Media:/data
-    runtime: nvidia
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]
+    group_add:
+      - video
+      - render
     devices:
-      - /dev/nvidia0:/dev/nvidia0
-      - /dev/nvidiactl:/dev/nvidiactl
-      - /dev/nvidia-modeset:/dev/nvidia-modeset
-      - /dev/nvidia-uvm:/dev/nvidia-uvm
-      - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
